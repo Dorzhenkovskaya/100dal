@@ -440,6 +440,48 @@
         top: -1.1rem
         left: -1.2rem
 
+.activity-prev
+    background: url("../img/icon/swiper-left.svg") center no-repeat
+    &::before
+        content: ''
+        background: url("../img/icon/swiper-left.svg") center no-repeat
+        width: 2rem
+        height: 2rem
+        position: absolute
+        z-index: 2
+    &::after
+        content: ''
+        width: 3.7rem
+        height: 3.7rem
+        display: inline-block
+        background: rgba(0, 0, 0, 0.67)
+        border: 1px solid #565656
+        border-radius: 100%
+        position: absolute
+        top: -1.1rem
+        left: -1.3rem
+.activity-next
+    background: url("../img/icon/swiper-right.svg") center no-repeat
+    margin-left: 4rem
+    &::before
+        content: ''
+        background: url("../img/icon/swiper-right.svg") center no-repeat
+        width: 2rem
+        height: 2rem
+        position: absolute
+        z-index: 2
+    &::after
+        content: ''
+        width: 3.7rem
+        height: 3.7rem
+        display: inline-block
+        background: rgba(0, 0, 0, 0.67)
+        border: 1px solid #565656
+        border-radius: 100%
+        position: absolute
+        top: -1.1rem
+        left: -1.2rem
+
 .title-center
     margin-left: 3.5rem
     margin-top: 0.4rem
@@ -1185,7 +1227,15 @@
     &:hover
         background-color: #CFD8DC
 
+.contacts__address
+    display: flex
+    align-items: center
+
 // Mobal-ver
+@media (max-width: 1600px)
+    .header__logo-offer
+        white-space: normal
+
 @media (max-width: 1200px)
     .nav__link
         font-size: .4rem

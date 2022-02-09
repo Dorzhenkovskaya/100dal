@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
           fill: 'row',
         },
         navigation: {
-          nextEl: '.activity-media-button-next',
-          prevEl: '.activity-media-button-prev',
+          nextEl: '.activity-next',
+          prevEl: '.activity-prev',
         }
       });
 
