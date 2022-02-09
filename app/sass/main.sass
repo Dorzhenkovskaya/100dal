@@ -1,0 +1,1332 @@
+@import config.sass
+
+@mixin img-resp()
+    width: 100%
+    height: 100%
+
+.container
+    max-width: 183rem
+
+.hidden
+    overflow: hidden
+
+.btn
+    display: block
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem
+    background: rgba(0, 0, 0, 0.31)
+    border: 1px solid #D8CA9C
+    box-sizing: border-box
+    font-family: 'Source Sans Pro Regular'
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 121.19%
+    text-transform: uppercase
+    color: #FFFFFF
+    cursor: pointer
+
+.btn-light
+    display: block
+    padding: 0.8rem 1.5rem 0.8rem 1.5rem
+    border: 1px solid #D8CA9C
+    box-sizing: border-box
+    background: none
+    font-family: 'Jost Regular'
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 121.19%
+    text-transform: uppercase
+    color: #1F1F1F
+
+.header
+    position: relative
+    z-index: 10
+    &__logo
+        margin-top: 0.2rem
+        margin-left: 2.7rem
+        display: flex
+        align-items: center
+        &-offer
+            margin-left: 0.8rem
+            margin-top: 0.7rem
+            font-family: 'Jost Regular'
+            font-size: 0.4rem
+            color: #fff
+            line-height: 121.19%
+            white-space: nowrap
+            text-transform: uppercase
+    &__video
+        display: block
+        width: 22rem
+        height: 7.3rem
+        margin: auto
+        text-align: center
+        img
+            position: sticky
+            top: 0
+            @include img-resp
+    &__social
+        position: absolute
+        bottom: 1.3rem
+        left: 2.7rem
+        display: flex
+        &-wr
+            position: relative
+            margin-right: 0.4rem
+            width: 1.4rem
+            height: 1.4rem
+            border: 1px solid #2E201D
+            box-sizing: border-box
+            border-radius: 4px
+            &:hover
+                border: 1px solid #CDCDCD
+        &-img
+            img
+                width: 0.6rem
+                height: 0.6rem
+                margin: 0
+                position: absolute
+                top: 50%
+                left: 50%
+                margin-right: -50%
+                transform: translate(-50%, -50%)
+    &__btn
+        margin-left: 0.4rem
+        &:hover
+            -webkit-transform: scale(1.2)
+            -ms-transform: scale(1.2)
+            transform: scale(1.2)
+
+.s-main-banner
+    position: relative
+
+.main-banner-bg-img
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 0
+    img
+        display: block
+        width: 100%
+        min-height: 100vh
+        object-fit: cover
+        position: sticky
+        top: 0
+    video
+        display: block
+        width: 100%
+        min-height: 100vh
+        object-fit: cover
+        position: sticky
+        top: 0
+
+.main-banner
+    position: relative
+    z-index: 1
+    &-section
+        min-height: 100vh
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 22px
+        font-weight: 600
+        position: relative
+    &-section-content
+        max-width: 48rem
+        text-align: center
+        font-family: 'Jost Regular'
+        font-style: normal
+        font-weight: 300
+        font-size: 48px
+        line-height: 113.69%
+        text-transform: uppercase
+        color: #939393
+        img
+            margin: 0
+            position: absolute
+            top: 36%
+            left: 50%
+            margin-right: -50%
+            transform: translate(-50%, -50%)
+
+.nav
+    display: inline-block
+    float: right
+    white-space: nowrap
+    &__item
+        margin-right: 0.9rem
+        display: inline-block
+        position: relative
+    &__link
+        position: relative
+        font-size: 0.4rem
+        font-family: 'Jost Regular'
+        color: #CDCDCD
+        text-decoration-line: underline
+        text-transform: uppercase
+        @media screen and ( max-width: 1300px )
+            font-size: 0.8rem
+        &:hover
+            color: #fff
+
+.pagination
+    transform: rotate(90deg)
+    position: fixed
+    right: -1rem
+    top: 50vh
+    z-index: 10
+    &__dot
+        position: relative
+        width: 5px
+        height: 5px
+        border: 2px solid #646464
+        background: #646464
+        border-radius: 100px
+        display: inline-block
+        cursor: pointer
+        transition: .3s
+        &--active
+            width: 8px
+            height: 8px
+            background: #D8CA9C
+            border: 2px solid #D8CA9C
+        &:hover
+            width: 8px
+            height: 8px
+            transition: .3s
+            border-color: lighten(#D8CA9C, 70%)
+            background: lighten(#D8CA9C, 70%)
+
+.section
+    min-height: 32.5rem
+    position: relative
+    &__right
+        float: right
+        width: 61%
+        height: 32.5rem
+        position: relative
+        z-index: 1
+        img
+            @include img-resp()
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: top center
+            object-fit: cover
+    &__left
+        float: left
+        width: 39%
+        padding-top: 5.3rem
+        padding-left: 3.4rem
+        &-title
+            font-family: 'Lora Regular'
+            font-style: normal
+            font-weight: normal
+            font-size: 2.5rem
+            line-height: 121.19%
+            text-transform: uppercase
+            white-space: nowrap
+            position: relative
+            z-index: 1
+    &__wr
+        background: #FCFCFB
+        position: absolute
+        top: 7.2rem
+        left: 4.8rem
+        padding: 3rem 0rem 3rem 2rem
+        width: 24rem
+        height: 19.7rem
+        z-index: 3
+        &-title
+            font-family: 'Lora Regular'
+            font-style: normal
+            font-weight: normal
+            font-size: 48px
+            line-height: 121.19%
+            text-transform: uppercase
+            color: #1F1F1F
+        &-subtitle
+            width: 12rem
+            margin-top: 0.6rem
+            font-family: 'Jost Regular'
+            font-style: normal
+            font-weight: normal
+            font-size: 18px
+            line-height: 146.19%
+            color: #A5A7B6
+        &-link
+            margin-top: 0.1rem
+            font-family: 'Jost Regular'
+            font-style: normal
+            font-weight: normal
+            font-size: 18px
+            line-height: 121.19%
+            text-transform: uppercase
+            color: #1F1F1F
+            cursor: pointer
+        &-bottom
+            position: absolute
+            bottom: 2.5rem
+            display: flex
+            align-items: center
+        &-arrow
+            margin-left: 1.2rem
+            height: 2.3rem
+            position: relative
+            z-index: 2
+            cursor: pointer
+            img
+                position: relative
+                z-index: 3
+        &-arrow::after
+            content: ''
+            width: 3.7rem
+            height: 3.7rem
+            display: inline-block
+            border: 1px solid #e4d9d5
+            border-radius: 100%
+            position: absolute
+            top: -0.6rem
+            left: 2.1rem
+            z-index: 1
+    &__img
+        &-1
+            position: absolute
+            top: 0
+            right: 0
+        &-2
+            position: absolute
+            right: 0.4rem
+            bottom: 0.5rem
+        &-3
+            position: absolute
+            right: 1.43rem
+            top: 1.2rem
+        &-4
+            position: absolute
+            right: 1rem
+            top: 1rem
+        &-5
+            position: absolute
+            top: 1.3rem
+            right: 1.9rem
+        &-6
+            position: absolute
+            right: 0.7rem
+            bottom: 3.2rem
+    &__line
+        position: absolute
+        top: 1.6rem
+        left: -1.5rem
+        width: 4rem
+        border: 1px solid #E4D9D5
+    &__btn
+        margin-top: 1.4rem
+        margin-left: 3.5rem
+        .btn-light
+            padding: 0.8rem 3rem 0.6rem 2.9rem
+
+.section-gray
+    background: #F0F0F0
+    &-title
+        color: #F0F0F0
+        -webkit-text-stroke: 1px #E4D9D5
+
+.section-black
+    background: #1F1F1F
+    .section__left-title
+        color: #1F1F1F
+        -webkit-text-stroke: 1px #484848
+    .section__wr
+        background: #383835
+    .section__wr-title
+        color: #FFFFFF
+    .section__wr-subtitle
+        color: #7B7B7B
+        width: 13rem
+    .section__wr-link
+        color: #FFFFFF
+    .section__wr-arrow::after
+        border: 1px solid rgba(123, 123, 123, 0.3)
+    .section__line
+        border: 1px solid #EDE5CC
+
+.section-brown
+    background: #E7DFD0
+    .section__left-title
+        color: #E7DFD0
+        -webkit-text-stroke: 1px #AEAA7E
+    .section__wr
+        background: #F5F3E6
+    .section__wr-title
+        color: #9B977E
+    .section__wr-subtitle
+        color: #BFBA9F
+        width: 11rem
+    .section__wr-link
+        color: #44380D
+    .section__wr-arrow::after
+        border: 1px solid #C3BEA3
+    .section__line
+        border: 1px solid #9B967E
+
+.section-white
+    .section__left-title
+        color: #FFFFFF
+        -webkit-text-stroke: 1px #E3E3E3
+    .section__wr
+        background: #F4F4F4
+    .section__wr-title
+        color: #1F1F1F
+    .section__wr-subtitle
+        color: #A5A7B6
+        width: 11rem
+    .section__line
+        border: 1px solid #D7D7D7
+
+.swiper
+    height: 100%
+.swiper-button-next:after
+    content: ''
+.swiper-button-prev:after
+    content: ''
+.swiper__pagination
+    display: flex
+    position: relative
+    bottom: 2.9rem
+    left: 2.3rem
+    width: 6rem
+.activity-media-button-prev
+    background: url("../img/icon/swiper-left.svg") center no-repeat
+    &::before
+        content: ''
+        background: url("../img/icon/swiper-left.svg") center no-repeat
+        width: 2rem
+        height: 2rem
+        position: absolute
+        z-index: 2
+    &::after
+        content: ''
+        width: 3.7rem
+        height: 3.7rem
+        display: inline-block
+        background: rgba(0, 0, 0, 0.67)
+        border: 1px solid #565656
+        border-radius: 100%
+        position: absolute
+        top: -1.1rem
+        left: -1.3rem
+.activity-media-button-next
+    background: url("../img/icon/swiper-right.svg") center no-repeat
+    margin-left: 4rem
+    &::before
+        content: ''
+        background: url("../img/icon/swiper-right.svg") center no-repeat
+        width: 2rem
+        height: 2rem
+        position: absolute
+        z-index: 2
+    &::after
+        content: ''
+        width: 3.7rem
+        height: 3.7rem
+        display: inline-block
+        background: rgba(0, 0, 0, 0.67)
+        border: 1px solid #565656
+        border-radius: 100%
+        position: absolute
+        top: -1.1rem
+        left: -1.2rem
+
+.title-center
+    margin-left: 3.5rem
+    margin-top: 0.4rem
+
+.events-media__content-wrap
+    position: absolute
+    top: 15.6rem
+    left: 10.3rem
+    width: 20rem
+    height: 16rem
+    z-index: 2
+
+.events-media__item
+    background: #F5F5F5
+    padding-top: 1.9rem
+    padding-left: 1.7rem
+    height: 14rem
+    &-data
+        font-family: 'Source Sans Pro Regular'
+        font-style: normal
+        font-weight: normal
+        font-size: 0.6rem
+        line-height: 121.19%
+        color: #969696
+    &-title
+        margin-top: 0.8rem
+        font-family: 'Lora Regular'
+        font-style: normal
+        font-weight: normal
+        font-size: 1.3rem
+        line-height: 121.19%
+        text-transform: uppercase
+        color: #1F1F1F
+    &-descr
+        font-family: 'Jost Regular'
+        font-style: normal
+        font-weight: normal
+        font-size: 0.6rem
+        line-height: 1.28
+        color: #a5a7b6
+        margin-top: 0.6rem
+        width: 16rem
+.events-swiper-navigation
+    display: flex
+    flex-direction: column
+    width: 5rem
+    position: absolute
+    top: 22.5rem
+    left: 4rem
+
+.events-prev
+    border: none
+    background: url("../img/icon/arrow-left-black.svg") center no-repeat
+    width: 2rem
+    height: 2rem
+    position: relative
+    &::after
+        content: ''
+        width: 3.7rem
+        height: 3.7rem
+        display: inline-block
+        border: 1px solid #E4D9D5
+        border-radius: 100%
+        position: absolute
+        top: -0.9rem
+        left: -0.8rem
+.events-next
+    border: none
+    background: url("../img/icon/arrow-right-black.svg") center no-repeat
+    width: 2rem
+    height: 2rem
+    margin-top: 2.2rem
+    position: relative
+    &::after
+        content: ''
+        width: 3.7rem
+        height: 3.7rem
+        display: inline-block
+        border: 1px solid #E4D9D5
+        border-radius: 100%
+        position: absolute
+        top: -0.9rem
+        left: -0.8rem
+
+.events-pagination
+    position: absolute
+    top: 10.9rem
+    left: -7.4rem !important
+    .swiper-pagination-bullet
+        width: 13px
+        height: 3px
+        background: #D8CA9C
+        opacity: 1
+        border-radius: 0%
+    .swiper-pagination-bullet-active
+        position: relative
+        width: 13px
+        height: 45px
+        background: url("../img/icon/wineglass.svg") center no-repeat
+        &::before
+            content: ''
+            width: 13px
+            height: 3px
+            background: #7C7470
+            position: absolute
+            bottom: 0
+            left: 0
+.events-photo-media__content-wrap
+    margin-top: 1rem
+    height: 30.6rem
+
+.news
+    padding: 2.7rem 0 0 5rem
+    &__title
+        padding-left: 1.9rem
+        width: 19rem
+
+.news-media__content-wrap
+    margin-top: 1.8rem
+    height: 26.5rem
+
+.news-swiper-navigation
+    position: absolute
+    top: 1.8rem
+    right: 16.3rem
+    .events-next
+        margin-left: 2rem
+
+.news-media__item
+    width: 38.2rem
+    &-wr1
+        position: relative
+        width: 99%
+        img
+            width: 100%
+    &-wr2
+        background: #FFFFFF
+        position: absolute
+        top: 10.8rem
+        left: 2rem
+        width: 21.1rem
+        padding: 1.5rem 1.2rem 2rem 1.5rem
+        &-data
+            font-family: 'Source Sans Pro Regular'
+            font-style: normal
+            font-weight: normal
+            font-size: 0.6rem
+            line-height: 121.19%
+            color: #969696
+        &-title
+            margin-top: 0.8rem
+            font-family: 'Lora Regular'
+            font-style: normal
+            font-weight: normal
+            font-size: 1.3rem
+            line-height: 121.19%
+            color: #1F1F1F
+        &-btn
+            margin-top: 2rem
+            .btn-light
+                padding: 0.7rem 4.8rem 0.7rem 4.9rem
+
+.contacts
+    &__img
+        position: relative
+        z-index: 2
+        width: 1.8rem
+        height: 1.8rem
+        &::after
+            content: ''
+            width: 1.8rem
+            height: 1.8rem
+            display: inline-block
+            border: none
+            border-radius: 100%
+            background: #fff
+            position: absolute
+            top: 0
+            left: 0
+            z-index: 1
+        img
+            position: relative
+            z-index: 2
+            display: block
+            margin: 0 auto
+            top: 28%
+    &__text
+        margin-top: 0.4rem
+        font-family: 'Jost Regular'
+        font-style: normal
+        font-weight: normal
+        font-size: 18px
+        line-height: 123.69%
+        color: #1F1F1F
+        width: 16rem
+    &__address
+        margin-top: 0.7rem
+    &__connection
+        margin-top: 1.5rem
+        display: flex
+        align-items: center
+        &-wr
+            display: flex
+            align-items: center
+
+.contacts__text-element
+    width: 8rem
+    margin-left: 0.5rem
+
+.map
+    padding: 16.3rem 0 0 0
+    position: relative
+    &__location
+        width: 100%
+        height: 32.5rem
+        border: none
+        border-radius: 3rem
+
+.ymaps-2-1-79-map
+    width: 100%
+
+[class*="ymaps-2"][class*="-ground-pane"]
+    -webkit-filter: grayscale(100%)
+
+.footer
+    background: #1F1F1F
+    padding: 2rem 0 2.2rem 0
+    &__text
+        display: block
+        margin: 0 auto
+        width: 30rem
+        font-family: 'Lora Regular'
+        font-style: normal
+        font-weight: normal
+        font-size: 1rem
+        line-height: 121.19%
+        text-align: center
+        text-transform: uppercase
+        color: rgba(255, 255, 255, 0.6)
+    &__buy
+        margin-top: 1rem
+        font-family: 'Jost Regular'
+        font-style: normal
+        font-weight: normal
+        font-size: 0.6rem
+        line-height: 121.19%
+        text-align: center
+        text-transform: uppercase
+        color: #FFFFFF
+
+// Modal
+.modal
+    display: none
+    position: fixed
+    z-index: 1
+    padding-top: 100px
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    overflow: auto
+    background: rgba(0, 0, 0, 0.74)
+    z-index: 10
+
+    .modal-content
+        position: relative
+        background-color: #FFFFFF
+        margin: auto
+        padding: 0
+        width: 52%
+        height: 75%
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
+        -webkit-animation-name: animatetop
+        -webkit-animation-duration: 0.4s
+        animation-name: animatetop
+        animation-duration: 0.4s
+
+@-webkit-keyframes animatetop
+    from
+    top: -300px
+    opacity: 0
+    to
+    top: 0
+    opacity: 1
+@keyframes animatetop
+    from
+        top: -300px
+        opacity: 0
+    to
+        top: 0
+        opacity: 1
+
+.close
+    color: #818181
+    font-size: 28px
+    position: absolute
+    top: -1.2rem
+    right: -0.3rem
+    z-index: 2
+    cursor: pointer
+    &::after
+        content: ''
+        width: 1.5rem
+        height: 1.5rem
+        background: rgba(0,0,0,.67)
+        border: 1px solid #565656
+        border-radius: 100%
+        display: inline-block
+        position: absolute
+        top: 0.4rem
+        right: -0.4rem
+        z-index: -1
+
+.modal-swiper-navigation
+    position: absolute
+    top: 0
+
+.tovar-media__item
+    &-right
+        float: right
+        width: 50%
+        height: 100%
+        img
+            width: 100%
+            height: 100%
+    &-left
+        float: left
+        width: 50%
+        height: 100%
+        position: relative
+        img
+            width: 100%
+            height: 100%
+
+.tovar
+    &__wr
+        top: 1.5rem
+        position: absolute
+        margin-left: auto
+        margin-right: auto
+        left: 0
+        right: 0
+        text-align: center
+        &-header
+            font-family: 'Jost Regular'
+            font-style: normal
+            font-weight: normal
+            font-size: 8px
+            line-height: 108.69%
+            text-align: center
+            color: #BBA260
+        &-count
+            font-family: 'Lora Regular'
+            font-style: normal
+            font-weight: normal
+            font-size: 18px
+            line-height: 121.19%
+            text-transform: uppercase
+            color: #BBA461
+            margin-top: 2rem
+            text-align: center
+        &-title
+            font-family: 'Lora Regular'
+            font-style: normal
+            font-weight: normal
+            font-size: 28px
+            line-height: 121.19%
+            text-transform: uppercase
+            color: #1F1F1F
+            margin-top: 0.3rem
+        &-block
+            margin-top: 1.5rem
+            &-name
+                font-family: 'Jost Regular'
+                font-style: normal
+                font-weight: normal
+                font-size: 14px
+                line-height: 187.19%
+                text-align: center
+                color: #5B5D6B
+        &-price
+            font-family: 'Jost Regular'
+            font-style: normal
+            font-weight: normal
+            font-size: 18px
+            line-height: 121.19%
+            text-align: center
+            text-transform: uppercase
+            color: #1F1F1F
+            margin-top: 1.5rem
+        &-footer
+            font-family: 'Jost Regular'
+            font-style: normal
+            font-weight: normal
+            font-size: 8px
+            line-height: 108.69%
+            text-align: center
+            color: #BBA260
+            position: absolute
+            margin-left: auto
+            margin-right: auto
+            left: 0
+            right: 0
+            bottom: -1.3rem
+            text-align: center
+
+.tovar-prev
+    background: url("../img/icon/swiper-left.svg") center no-repeat
+    left: -3rem
+    &::before
+        content: ''
+        background: url("../img/icon/swiper-left.svg") center no-repeat
+        width: 2rem
+        height: 2rem
+        position: absolute
+        z-index: 2
+    &::after
+        content: ''
+        width: 3.7rem
+        height: 3.7rem
+        display: inline-block
+        background: none
+        border: 1px solid #E4D9D5
+        border-radius: 100%
+        position: absolute
+        top: -1.1rem
+        left: -1.3rem
+.tovar-next
+    background: url("../img/icon/swiper-right.svg") center no-repeat
+    margin-left: 4rem
+    right: -3rem
+    &::before
+        content: ''
+        background: url("../img/icon/swiper-right.svg") center no-repeat
+        width: 2rem
+        height: 2rem
+        position: absolute
+        z-index: 2
+    &::after
+        content: ''
+        width: 3.7rem
+        height: 3.7rem
+        display: inline-block
+        background: none
+        border: 1px solid #E4D9D5
+        border-radius: 100%
+        position: absolute
+        top: -1.1rem
+        left: -1.2rem
+
+.snacks-media-button-prev
+    background: url("../img/icon/swiper-left.svg") center no-repeat
+    &::before
+        content: ''
+        background: url("../img/icon/swiper-left.svg") center no-repeat
+        width: 2rem
+        height: 2rem
+        position: absolute
+        z-index: 2
+    &::after
+        content: ''
+        width: 3.7rem
+        height: 3.7rem
+        display: inline-block
+        background: rgba(0, 0, 0, 0.67)
+        border: 1px solid #565656
+        border-radius: 100%
+        position: absolute
+        top: -1.1rem
+        left: -1.3rem
+.snacks-media-button-next
+    background: url("../img/icon/swiper-right.svg") center no-repeat
+    margin-left: 4rem
+    &::before
+        content: ''
+        background: url("../img/icon/swiper-right.svg") center no-repeat
+        width: 2rem
+        height: 2rem
+        position: absolute
+        z-index: 2
+    &::after
+        content: ''
+        width: 3.7rem
+        height: 3.7rem
+        display: inline-block
+        background: rgba(0, 0, 0, 0.67)
+        border: 1px solid #565656
+        border-radius: 100%
+        position: absolute
+        top: -1.1rem
+        left: -1.2rem
+
+.gallery__pagination
+    position: absolute
+    bottom: 0
+    left: 50%
+    height: 4rem
+
+.gallery-prev
+    background: url("../img/icon/swiper-left.svg") center no-repeat
+    left: -3rem
+    &::before
+        content: ''
+        background: url("../img/icon/swiper-left.svg") center no-repeat
+        width: 2rem
+        height: 2rem
+        position: absolute
+        z-index: 2
+    &::after
+        content: ''
+        width: 3.7rem
+        height: 3.7rem
+        display: inline-block
+        background: rgba(0, 0, 0, 0.67)
+        border: 1px solid #565656
+        border-radius: 100%
+        position: absolute
+        top: -1.1rem
+        left: -1.3rem
+.gallery-next
+    background: url("../img/icon/swiper-right.svg") center no-repeat
+    margin-left: 4rem
+    right: -3rem
+    &::before
+        content: ''
+        background: url("../img/icon/swiper-right.svg") center no-repeat
+        width: 2rem
+        height: 2rem
+        position: absolute
+        z-index: 2
+    &::after
+        content: ''
+        width: 3.7rem
+        height: 3.7rem
+        display: inline-block
+        background: rgba(0, 0, 0, 0.67)
+        border: 1px solid #565656
+        border-radius: 100%
+        position: absolute
+        top: -1.1rem
+        left: -1.2rem
+
+.img-media__item
+    img
+        width: 100%
+        height: 100%
+
+.bar-prev
+    background: url("../img/icon/swiper-left.svg") center no-repeat
+    &::before
+        content: ''
+        background: url("../img/icon/swiper-left.svg") center no-repeat
+        width: 2rem
+        height: 2rem
+        position: absolute
+        z-index: 2
+    &::after
+        content: ''
+        width: 3.7rem
+        height: 3.7rem
+        display: inline-block
+        background: rgba(0, 0, 0, 0.67)
+        border: 1px solid #565656
+        border-radius: 100%
+        position: absolute
+        top: -1.1rem
+        left: -1.3rem
+.bar-next
+    background: url("../img/icon/swiper-right.svg") center no-repeat
+    margin-left: 4rem
+    &::before
+        content: ''
+        background: url("../img/icon/swiper-right.svg") center no-repeat
+        width: 2rem
+        height: 2rem
+        position: absolute
+        z-index: 2
+    &::after
+        content: ''
+        width: 3.7rem
+        height: 3.7rem
+        display: inline-block
+        background: rgba(0, 0, 0, 0.67)
+        border: 1px solid #565656
+        border-radius: 100%
+        position: absolute
+        top: -1.1rem
+        left: -1.2rem
+
+.warm-prev
+    background: url("../img/icon/swiper-left.svg") center no-repeat
+    &::before
+        content: ''
+        background: url("../img/icon/swiper-left.svg") center no-repeat
+        width: 2rem
+        height: 2rem
+        position: absolute
+        z-index: 2
+    &::after
+        content: ''
+        width: 3.7rem
+        height: 3.7rem
+        display: inline-block
+        background: rgba(0, 0, 0, 0.67)
+        border: 1px solid #565656
+        border-radius: 100%
+        position: absolute
+        top: -1.1rem
+        left: -1.3rem
+.warm-next
+    background: url("../img/icon/swiper-right.svg") center no-repeat
+    margin-left: 4rem
+    &::before
+        content: ''
+        background: url("../img/icon/swiper-right.svg") center no-repeat
+        width: 2rem
+        height: 2rem
+        position: absolute
+        z-index: 2
+    &::after
+        content: ''
+        width: 3.7rem
+        height: 3.7rem
+        display: inline-block
+        background: rgba(0, 0, 0, 0.67)
+        border: 1px solid #565656
+        border-radius: 100%
+        position: absolute
+        top: -1.1rem
+        left: -1.2rem
+
+.shop-prev
+    background: url("../img/icon/swiper-left.svg") center no-repeat
+    &::before
+        content: ''
+        background: url("../img/icon/swiper-left.svg") center no-repeat
+        width: 2rem
+        height: 2rem
+        position: absolute
+        z-index: 2
+    &::after
+        content: ''
+        width: 3.7rem
+        height: 3.7rem
+        display: inline-block
+        background: rgba(0, 0, 0, 0.67)
+        border: 1px solid #565656
+        border-radius: 100%
+        position: absolute
+        top: -1.1rem
+        left: -1.3rem
+.shop-next
+    background: url("../img/icon/swiper-right.svg") center no-repeat
+    margin-left: 4rem
+    &::before
+        content: ''
+        background: url("../img/icon/swiper-right.svg") center no-repeat
+        width: 2rem
+        height: 2rem
+        position: absolute
+        z-index: 2
+    &::after
+        content: ''
+        width: 3.7rem
+        height: 3.7rem
+        display: inline-block
+        background: rgba(0, 0, 0, 0.67)
+        border: 1px solid #565656
+        border-radius: 100%
+        position: absolute
+        top: -1.1rem
+        left: -1.2rem
+
+.hamburger-menu
+    display: none
+
+#menu__toggle
+    opacity: 0
+    &:checked ~ .menu__btn > span
+        transform: rotate(45deg)
+    &:checked ~ .menu__btn > span::before
+        top: 0
+        transform: rotate(0)
+    &:checked ~ .menu__btn > span::after
+        top: 0
+        transform: rotate(90deg)
+    &:checked ~ .menu__box
+        visibility: visible
+        left: 0
+
+.menu__btn
+    display: flex
+    align-items: center
+    position: fixed
+    top: 20px
+    left: 20px
+    width: 40px
+    height: 40px
+    cursor: pointer
+    z-index: 1
+    & > span,
+    & > span::before,
+    & > span::after
+        display: block
+        position: absolute
+        width: 100%
+        height: 3px
+        background-color: #FFFFFF
+        transition-duration: .25s
+    & > span::before
+        content: ''
+        top: -8px
+    & > span::after
+        content: ''
+        top: 8px
+
+.menu__box
+    display: block
+    position: fixed
+    visibility: hidden
+    top: 0
+    left: -100%
+    width: 300px
+    height: 100%
+    margin: 0
+    padding: 80px 0
+    list-style: none
+    background: rgba(0, 0, 0, 0.74)
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2)
+    transition-duration: .25s
+
+.menu__item
+    display: block
+    padding: 12px 24px
+    color: #FFFFFF
+    font-family: 'Roboto', sans-serif
+    font-size: 20px
+    font-weight: 600
+    text-decoration: none
+    transition-duration: .25s
+    text-transform: uppercase
+
+    &:hover
+        background-color: #CFD8DC
+
+// Mobal-ver
+@media (max-width: 1200px)
+    .nav__link
+        font-size: .4rem
+    .nav__item
+        margin-right: 0.1rem
+    .header__logo
+        margin-left: 0
+    .main-banner-section-content
+        max-width: 38rem
+        font-size: 1.2rem
+    .title-center
+        margin-left: 0
+    .section__left
+        padding-left: 2.7rem
+    .news-swiper-navigation
+        right: 6rem
+    .news-media__item-wr2
+        top: 9rem
+    .map__location
+        width: 100%
+    .ymaps-2-1-79-map
+        width: 100%
+
+@media (max-width: 991px)
+    .nav__link
+        font-size: .32rem
+    .header__logo
+        flex-direction: column
+    .content-2
+        display: none
+    .section__left
+        float: none
+        width: 100%
+        padding-top: 3rem
+        min-height: 21rem
+    .section__right
+        float: none
+        width: 100%
+    .section__line
+        display: none
+    .section__wr
+        top: 25%
+        width: 27rem
+        height: 17rem
+        left: 50%
+        margin-right: -50%
+        transform: translate(-50%, -50%)
+    .section__img-1
+        width: 9rem
+        height: 9rem
+        img
+            width: 100%
+            height: 100%
+    .section__img-2
+        width: 9rem
+        height: 9rem
+        right: 3rem
+        bottom: 1rem
+        img
+            width: 100%
+            height: 100%
+    .section__img-5
+        top: -0.4rem
+    .section__img-6
+        bottom: 2rem
+    .section__wr-bottom
+        bottom: 2rem
+    .section__btn
+        margin: 0 auto
+        margin-top: 1.4rem
+        .btn-light
+            width: 94%
+    .events-swiper-navigation
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        top: 13rem
+        width: 6rem
+    .events-next
+        margin-top: 0
+    .events-media__content-wrap
+        top: 46%
+        left: 50%
+        margin-right: -50%
+        transform: translate(-50%, -50%)
+    .news-swiper-navigation
+        top: 7rem
+        right: 21rem
+    .news
+        padding: 2rem 1rem 0 1rem
+    .news-media__content-wrap
+        margin-top: 6rem
+    .news-media__item-wr2
+        width: 100%
+        top: 17rem
+        left: 0
+    .news-media__item-wr2-btn
+        margin-top: 0.8rem
+        .btn-light
+            width: 100%
+    .news
+        min-height: 40rem
+    .contacts__connection
+        display: block
+    .contacts__connection-wr
+        margin-top: 1rem
+    .contacts__connection
+        margin-top: 0
+    .contacts__address
+        display: flex
+    .contacts__text
+        margin-left: 0.6rem
+    .contacts
+        min-height: 18rem
+        .section__wr
+            padding: 1.7rem 0 3rem 2rem
+
+@media (max-width: 575px)
+    .hamburger-menu
+        display: block
+    .header__logo-offer
+        display: none
+    .header__nav
+        display: none
+    .header__logo
+        position: absolute
+        top: 0
+        right: 1rem
+    .header__social
+        left: 50%
+        margin-right: -50%
+        transform: translate(-50%, -50%)
+    .events-swiper-navigation
+        top: 10rem
+        width: 8rem
+    .section__wr
+        height: 16rem
+    .swiper__pagination
+        width: 85%
+    .main-banner-bg-img
+        height: 100%
+        video
+            height: 100%
+            position: relative
