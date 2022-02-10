@@ -167,8 +167,6 @@
         color: #CDCDCD
         text-decoration-line: underline
         text-transform: uppercase
-        @media screen and ( max-width: 1300px )
-            font-size: 0.8rem
         &:hover
             color: #fff
 
@@ -1232,10 +1230,17 @@
     align-items: center
 
 // Mobal-ver
-@media (max-width: 1600px)
+@media (max-width: 1920px)
+    .header__logo-offer
+        white-space: nowrap
+@media (max-width: 1549px)
+    .nav__item
+        margin-right: 0
+    .header__logo
+        margin-left: 0
+@media (max-width: 1262px)
     .header__logo-offer
         white-space: normal
-
 @media (max-width: 1200px)
     .nav__link
         font-size: .4rem
@@ -1243,6 +1248,9 @@
         margin-right: 0.1rem
     .header__logo
         margin-left: 0
+        // flex-direction: column
+    .header__logo-offer
+        margin-top: 10px
     .main-banner-section-content
         max-width: 38rem
         font-size: 1.2rem
