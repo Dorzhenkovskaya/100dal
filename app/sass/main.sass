@@ -71,6 +71,7 @@
         bottom: 1.3rem
         left: 2.7rem
         display: flex
+        z-index: 1
         &-wr
             position: relative
             margin-right: 0.4rem
@@ -82,6 +83,7 @@
             &:hover
                 border: 1px solid #CDCDCD
         &-img
+            cursor: pointer
             img
                 width: 0.6rem
                 height: 0.6rem
@@ -1249,7 +1251,6 @@
         margin-right: 0.1rem
     .header__logo
         margin-left: 0
-        // flex-direction: column
     .header__logo-offer
         margin-top: 10px
     .main-banner-section-content
@@ -1362,7 +1363,9 @@
         .section__wr
             padding: 1.7rem 0 3rem 2rem
 
-@media (max-width: 575px)
+@media screen and (max-width: 575px)
+    .main-banner
+        width: 100%
     .hamburger-menu
         display: block
     .header__logo-offer
