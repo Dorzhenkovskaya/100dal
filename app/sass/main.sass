@@ -4,6 +4,18 @@
     width: 100%
     height: 100%
 
+*::-webkit-media-controls-panel
+    display: none!important
+    -webkit-appearance: none
+
+*::-webkit-media-controls-play-button
+    display: none!important
+    -webkit-appearance: none
+
+*::-webkit-media-controls-start-playback-button
+    display: none!important
+    -webkit-appearance: none
+
 .container
     max-width: 183rem
 
@@ -238,7 +250,6 @@
         left: 4.8rem
         padding: 3rem 0rem 3rem 2rem
         width: 24rem
-        height: 19.7rem
         z-index: 3
         &-title
             font-family: 'Lora Regular'
@@ -257,6 +268,7 @@
             font-size: 18px
             line-height: 146.19%
             color: #A5A7B6
+            margin-bottom: 30px
         &-link
             margin-top: 0.1rem
             font-family: 'Jost Regular'
@@ -267,9 +279,9 @@
             text-transform: uppercase
             color: #1F1F1F
             cursor: pointer
+            border: none
+            background: none
         &-bottom
-            position: absolute
-            bottom: 2.5rem
             display: flex
             align-items: center
         &-arrow
@@ -299,8 +311,13 @@
             right: 0
         &-2
             position: absolute
-            right: 0.4rem
-            bottom: 0.5rem
+            right: 2.5rem
+            bottom: 0
+            width: 240px
+            height: 270px
+            img
+                width: 100%
+                height: 100%
         &-3
             position: absolute
             right: 1.43rem
@@ -499,7 +516,7 @@
     background: #F5F5F5
     padding-top: 1.9rem
     padding-left: 1.7rem
-    height: 14rem
+    max-height: 14rem
     &-data
         font-family: 'Source Sans Pro Regular'
         font-style: normal
@@ -539,6 +556,8 @@
     width: 2rem
     height: 2rem
     position: relative
+    padding: 0
+    margin: 0
     &::after
         content: ''
         width: 3.7rem
@@ -547,8 +566,9 @@
         border: 1px solid #E4D9D5
         border-radius: 100%
         position: absolute
-        top: -0.9rem
-        left: -0.8rem
+        top: 0
+        left: 0
+        transform: translate(-25%, -25%)
 .events-next
     border: none
     background: url("../img/icon/arrow-right-black.svg") center no-repeat
@@ -556,6 +576,8 @@
     height: 2rem
     margin-top: 2.2rem
     position: relative
+    padding: 0
+    margin: 0
     &::after
         content: ''
         width: 3.7rem
@@ -564,8 +586,9 @@
         border: 1px solid #E4D9D5
         border-radius: 100%
         position: absolute
-        top: -0.9rem
-        left: -0.8rem
+        top: 0
+        left: 0
+        transform: translate(-25%, -25%)
 
 .events-pagination
     position: absolute
@@ -1182,7 +1205,7 @@
     width: 40px
     height: 40px
     cursor: pointer
-    z-index: 1
+    z-index: 2
     & > span,
     & > span::before,
     & > span::after
@@ -1213,6 +1236,7 @@
     background: rgba(0, 0, 0, 0.74)
     box-shadow: 1px 0px 6px rgba(0, 0, 0, .2)
     transition-duration: .25s
+    z-index: 1
 
 .menu__item
     display: block
@@ -1261,38 +1285,81 @@
     .section__left
         padding-left: 2.7rem
     .news-swiper-navigation
-        right: 6rem
+        right: 3rem
     .news-media__item-wr2
         top: 9rem
+        left: 0
+        width: 99%
+        padding: 1rem 1rem
+        font-size: 28px
     .map__location
         width: 100%
     .ymaps-2-1-79-map
         width: 100%
+    .section__left-title
+        overflow: hidden
+    .section__wr
+        left: 56px
+        width: 20rem
+        padding: 3rem 0 2rem 2rem
+    .section__wr-subtitle
+        margin-bottom: 40px
+    .section__img-1
+        width: 250px
+        height: 250px
+        img
+            height: 100%
+            width: 100%
+    .section__img-2
+        width: 230px
+        height: 230px
+        img
+            height: 100%
+            width: 100%
+    .section__img-3
+        z-index: -1
+    .section__img-5
+        z-index: -1
+    .section__img-6
+        z-index: -1
+        width: 230px
+        height: 230px
+        bottom: 2rem
+        img
+            height: 100%
+            width: 100%
+    .section-black .section__wr-subtitle
+        width: 11rem
+    .section__left
+        padding-left: 2rem
+    .news__title
+        padding-left: 0
+    .contact .section__wr
+        padding: 3rem 0 2rem 20px
 
 @media (max-width: 991px)
     .nav__link
         font-size: .32rem
     .header__logo
         flex-direction: column
-    .content-2
-        display: none
+    .content-2 .main-banner-section-content
+        width: 90%
+        font-size: 16px
+    .section__left-title
+        overflow: hidden
     .section__left
         float: none
         width: 100%
         padding-top: 3rem
-        min-height: 21rem
+        min-height: 11rem
     .section__right
         float: none
         width: 100%
     .section__line
         display: none
     .section__wr
-        top: 25%
-        width: 27rem
-        height: 17rem
-        left: 50%
-        margin-right: -50%
-        transform: translate(-50%, -50%)
+        width: 90%
+        top: 10%
     .section__img-1
         width: 9rem
         height: 9rem
@@ -1308,10 +1375,8 @@
             width: 100%
             height: 100%
     .section__img-5
-        top: -0.4rem
+        top: 1rem
     .section__img-6
-        bottom: 2rem
-    .section__wr-bottom
         bottom: 2rem
     .section__btn
         margin: 0 auto
@@ -1322,7 +1387,7 @@
         flex-direction: row
         justify-content: space-between
         align-items: center
-        top: 13rem
+        top: 17%
         width: 6rem
     .events-next
         margin-top: 0
@@ -1339,15 +1404,15 @@
     .news-media__content-wrap
         margin-top: 6rem
     .news-media__item-wr2
-        width: 100%
-        top: 17rem
         left: 0
+    .news-media__item-wr2-title
+        font-size: 25px
     .news-media__item-wr2-btn
         margin-top: 0.8rem
         .btn-light
             width: 100%
     .news
-        min-height: 40rem
+        max-height: 20rem
     .contacts__connection
         display: block
     .contacts__connection-wr
@@ -1362,10 +1427,35 @@
         min-height: 18rem
         .section__wr
             padding: 1.7rem 0 3rem 2rem
+    .footer__text
+        width: 26rem
+    .news-swiper-navigation
+        width: 7rem
 
 @media screen and (max-width: 575px)
+    .section
+        min-height: 24rem
     .main-banner
-        width: 100%
+        max-width: 100%
+    .section__wr
+        width: 90%
+        top: 10%
+        left: 50%
+        padding: 33px 25px 35px 25px
+        transform: translate(-50%, 0)
+    .section__wr-title
+        font-size: 20px
+    .section__wr-subtitle
+        font-size: 12px
+        width: 198px
+    .section__left
+        padding-top: 33px
+        padding-left: 25px
+    .section__right
+        height: 375px
+    .section__left-title
+        overflow: hidden
+        font-size: 43px
     .hamburger-menu
         display: block
     .header__logo-offer
@@ -1381,14 +1471,202 @@
         margin-right: -50%
         transform: translate(-50%, -50%)
     .events-swiper-navigation
-        top: 10rem
-        width: 8rem
-    .section__wr
-        height: 16rem
+        top: 50px
+        left: 30px
+        width: 6rem
+        position: relative
+        z-index: 2
     .swiper__pagination
-        width: 85%
-    .main-banner-bg-img
-        height: 100%
-        video
+        width: 80%
+    // .main-banner-bg-img
+    //     height: 100%
+    //     video
+    //         height: 100%
+    //         position: relative
+    .main-banner-section-content
+        width: 236px
+        position: relative
+        img
+            width: 100%
+            transform: translate(-50%, -170%)
+    .section__img-1
+        width: 100px
+        height: 100px
+        top: 10px
+        right: 10px
+    .section__img-2
+        width: 150px
+        height: 150px
+        right: 15px
+        bottom: 1rem
+    .section__img-3
+        width: 120px
+        height: 240px
+        img
+            width: 100%
             height: 100%
-            position: relative
+    .section__img-4
+        width: 150px
+        height: 210px
+        right: 5px
+        img
+            width: 100%
+            height: 100%
+    .section__img-5
+        width: 100px
+        height: 90px
+        top: 15px
+        right: 30px
+        img
+            width: 100%
+            height: 100%
+    .section__img-6
+        width: 120px
+        height: 106.47px
+        right: 1.2rem
+        bottom: 1rem
+        img
+            width: 100%
+            height: 100%
+    .section__wr-bottom
+        margin-top: 37px
+        z-index: 2
+        position: relative
+    .section__wr-link
+        font-size: 12px
+    .section__wr-arrow
+        width: 35px
+        height: 8px
+        position: relative
+        margin-left: 13px
+        img
+            position: absolute
+            width: 100%
+            height: 100%
+    .section__wr-arrow::after
+        width: 40px
+        height: 40px
+        left: 16px
+    .swiper__pagination
+        bottom: 50px
+        left: 1.5rem
+    .bar-next::after
+        width: 74px
+        height: 74px
+        top: -19px
+        left: -25px
+    .bar-prev::after
+        top: -19px
+        left: -21px
+        width: 74px
+        height: 74px
+    .activity-next::after
+        width: 74px
+        height: 74px
+        top: -19px
+        left: -25px
+    .activity-prev::after
+        width: 74px
+        height: 74px
+        top: -19px
+        left: -21px
+    .warm-next::after
+        width: 74px
+        height: 74px
+        top: -19px
+        left: -25px
+    .warm-prev::after
+        width: 74px
+        height: 74px
+        top: -19px
+        left: -21px
+    .shop-prev::after
+        width: 74px
+        height: 74px
+        top: -19px
+        left: -25px
+    .shop-next::after
+        width: 74px
+        height: 74px
+        top: -19px
+        left: -21px
+    .snacks-media-button-next::after
+        width: 74px
+        height: 74px
+        top: -19px
+        left: -25px
+    .snacks-media-button-prev::after
+        width: 74px
+        height: 74px
+        top: -19px
+        left: -21px
+    .section-black .section__wr-subtitle
+        width: 191px
+    .section-brown .section__wr-subtitle
+        width: 177px
+    .section-white .section__wr-subtitle
+        width: 198px
+    .section-white .section__wr-title
+        width: 269px
+    .events-media__content-wrap
+        width: 90%
+        top: 50%
+    .events-media__content
+        top: 10%
+    .events-media__item
+        padding: 36px 25px 30px 25px
+        max-height: 11rem
+    .events-media__item-data
+        font-size: 12px
+    .events-media__item-title
+        font-size: 20px
+        margin-top: 7px
+    .events-media__item-descr
+        font-size: 12px
+        width: 228px
+        margin-bottom: 22px
+    .events-pagination
+        top: 62%
+        left: 25px !important
+        width: 65px !important
+    .events-photo-media__content-wrap
+        height: 375px
+        margin-top: 220px
+    .news__title
+        padding-left: 0
+    .news-swiper-navigation
+        top: 4rem
+        right: 0
+        left: 2rem
+    .news-media__item-wr2
+        width: 100%
+        top: 7rem
+        left: 0
+        padding: 20px 17px 17px 17px
+    .news-media__item-wr2-data
+        font-size: 12px
+    .news-media__item-wr2-title
+        font-size: 20px
+        margin-top: 7px
+    .news-media__item-wr2-btn .btn-light
+        text-align: center
+        padding: 15px 15px
+    .news
+        max-height: 700px
+    .contacts .section__wr
+        padding: 31px 27px 36px 25px
+    .contacts
+        min-height: 12rem
+    .contacts__text
+        font-size: 12px
+    .map__location
+        height: 450px
+    .footer
+        padding: 44px 20px 36px 20px
+    .footer__text
+        font-size: 20px
+        width: 100%
+    .section__map
+        height: 430px
+    .footer__buy
+        font-size: 14px

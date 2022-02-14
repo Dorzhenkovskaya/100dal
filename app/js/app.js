@@ -187,18 +187,18 @@ document.addEventListener('DOMContentLoaded', () => {
           }
       }
 
-      var modal_1 = document.getElementById('myModal_1');
-      var btn_1 = document.getElementById("myBtn_1");
-      var span_1 = document.getElementById("close_1");
-      btn_1.onclick = function() {
-          modal_1.style.display = "block";
-      }
-      span_1.onclick = function() {
-          modal_1.style.display = "none";
-      }
-      window.onclick = function(event) {
-          if (event.target == modal_1) {
-              modal_1.style.display = "none";
-          }
-      }
+      // var modal_1 = document.getElementById('myModal_1');
+      // var btn_1 = document.getElementById("myBtn_1");
+      // var span_1 = document.getElementById("close_1");
+      // btn_1.onclick = function() {
+      //     modal_1.style.display = "block";
+      // }
+      // span_1.onclick = function() {
+      //     modal_1.style.display = "none";
+      // }
+      // window.onclick = function(event) {
+      //     if (event.target == modal_1) {
+      //         modal_1.style.display = "none";
+      //     }
+      // }
 })
