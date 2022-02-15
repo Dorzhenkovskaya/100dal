@@ -175,6 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
       var modal = document.getElementById('myModal');
       var btn = document.getElementById("myBtn");
       var span = document.getElementsByClassName("close")[0];
+
       btn.onclick = function() {
           modal.style.display = "block";
       }
@@ -186,6 +187,10 @@ document.addEventListener('DOMContentLoaded', () => {
               modal.style.display = "none";
           }
       }
+
+      btn.addEventListener('touchstart', () => {
+        modal.style.display = "block";
+      });
 
       // var modal_1 = document.getElementById('myModal_1');
       // var btn_1 = document.getElementById("myBtn_1");
