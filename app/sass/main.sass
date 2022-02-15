@@ -316,8 +316,7 @@
             width: 240px
             height: 270px
             img
-                width: 100%
-                height: 100%
+                @include img-resp
         &-3
             position: absolute
             right: 1.43rem
@@ -831,16 +830,14 @@
         width: 50%
         height: 100%
         img
-            width: 100%
-            height: 100%
+            @include img-resp
     &-left
         float: left
         width: 50%
         height: 100%
         position: relative
         img
-            width: 100%
-            height: 100%
+            @include img-resp
 
 .tovar
     &__wr
@@ -1052,8 +1049,7 @@
 
 .img-media__item
     img
-        width: 100%
-        height: 100%
+        @include img-resp
 
 .bar-prev
     background: url("../img/icon/swiper-left.svg") center no-repeat
@@ -1258,6 +1254,79 @@
     display: flex
     align-items: center
 
+.light
+    background: #E5E5E5
+
+.header-black
+    .nav__link
+        color: #494949
+    .header__logo-offer
+        color: #494949
+
+.section__news-subtitle
+    font-family: Jost
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
+    line-height: 121.19%
+    color: #A5A7B6
+    margin-top: 29px
+    width: 477px
+
+.section__news-main
+    margin-top: 102px
+    margin-left: 108px
+    .section__left-title
+        width: 525px
+        white-space: normal
+        font-size: 48px
+
+.section__news
+    margin-top: 59px
+    &:nth-child(2)
+        margin-top: -3rem
+
+.wr-for-number
+    position: relative
+
+.section__news-number
+    font-family: Lora
+    font-style: normal
+    font-weight: normal
+    font-size: 140px
+    line-height: 108.19%
+    text-transform: uppercase
+    color: #E5E5E5
+    -webkit-text-stroke: 1px #D8CA9C
+    position: absolute
+    top: -3.4rem
+    left: 11rem
+
+.section__news-wr
+    display: flex
+    justify-content: space-between
+    align-items: end
+
+.section__news-desc
+    background: #FFFFFF
+    padding: 43px 45px 50px 46px
+    width: 610px
+    transform: translate(47%, -2%)
+    &::after
+        content: ''
+        width: 105.56px
+        height: 0px
+        position: absolute
+        top: 54px
+        left: -80px
+        border: 1px solid #9B967E
+
+.section__news-img
+    width: 1078px
+    height: 618px
+    img
+        @include img-resp
+
 // Mobal-ver
 @media (max-width: 1920px)
     .header__logo-offer
@@ -1310,14 +1379,12 @@
         width: 250px
         height: 250px
         img
-            height: 100%
-            width: 100%
+            @include img-resp
     .section__img-2
         width: 230px
         height: 230px
         img
-            height: 100%
-            width: 100%
+            @include img-resp
     .section__img-3
         z-index: -1
     .section__img-5
@@ -1328,8 +1395,7 @@
         height: 230px
         bottom: 2rem
         img
-            height: 100%
-            width: 100%
+            @include img-resp
     .section-black .section__wr-subtitle
         width: 11rem
     .section__left
@@ -1366,16 +1432,14 @@
         width: 9rem
         height: 9rem
         img
-            width: 100%
-            height: 100%
+            @include img-resp
     .section__img-2
         width: 9rem
         height: 9rem
         right: 3rem
         bottom: 1rem
         img
-            width: 100%
-            height: 100%
+            @include img-resp
     .section__img-5
         top: 1rem
     .section__img-6
@@ -1501,31 +1565,27 @@
         width: 120px
         height: 240px
         img
-            width: 100%
-            height: 100%
+            @include img-resp
     .section__img-4
         width: 150px
         height: 210px
         right: 5px
         img
-            width: 100%
-            height: 100%
+            @include img-resp
     .section__img-5
         width: 100px
         height: 90px
         top: 15px
         right: 30px
         img
-            width: 100%
-            height: 100%
+            @include img-resp
     .section__img-6
         width: 120px
         height: 106.47px
         right: 1.2rem
         bottom: 1rem
         img
-            width: 100%
-            height: 100%
+            @include img-resp
     .section__wr-bottom
         margin-top: 37px
         z-index: 2
@@ -1539,8 +1599,7 @@
         margin-left: 13px
         img
             position: absolute
-            width: 100%
-            height: 100%
+            @include img-resp
     .section__wr-arrow::after
         width: 40px
         height: 40px
