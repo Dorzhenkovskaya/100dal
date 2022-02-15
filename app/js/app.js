@@ -138,15 +138,6 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
       });
-      const swiperNewsPrev = document.getElementById('swiperNewsPrev')
-      const swiperNewsNext = document.getElementById('swiperNewsNext')
-
-      swiperNewsPrev.addEventListener('click', () => {
-        newsSlider.slidePrev();
-      })
-      swiperNewsNext.addEventListener('click', () => {
-        newsSlider.slideNext();
-      })
 
       const tovarSlider = new Swiper('#tovar-slider', {
         spaceBetween: 10,
@@ -157,18 +148,6 @@ document.addEventListener('DOMContentLoaded', () => {
         navigation: {
           nextEl: '.tovar-next',
           prevEl: '.tovar-prev',
-        }
-      });
-
-      const imgSlider = new Swiper('#img-slider', {
-        spaceBetween: 10,
-        grid: {
-          rows: 1,
-          fill: 'row',
-        },
-        navigation: {
-          nextEl: '.gallery-next',
-          prevEl: '.gallery-prev',
         }
       });
 
@@ -188,8 +167,26 @@ document.addEventListener('DOMContentLoaded', () => {
           }
       }
 
-      btn.addEventListener('touchstart', () => {
-        modal.style.display = "block";
+      const swiperNewsPrev = document.getElementById('swiperNewsPrev')
+      const swiperNewsNext = document.getElementById('swiperNewsNext')
+
+      swiperNewsPrev.addEventListener('click', () => {
+        newsSlider.slidePrev();
+      })
+      swiperNewsNext.addEventListener('click', () => {
+        newsSlider.slideNext();
+      })
+
+      const imgSlider = new Swiper('#img-slider', {
+        spaceBetween: 10,
+        grid: {
+          rows: 1,
+          fill: 'row',
+        },
+        navigation: {
+          nextEl: '.gallery-next',
+          prevEl: '.gallery-prev',
+        }
       });
 
       // var modal_1 = document.getElementById('myModal_1');
