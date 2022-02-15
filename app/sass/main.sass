@@ -1285,6 +1285,8 @@
     margin-top: 59px
     &:nth-child(2)
         margin-top: -3rem
+    &:nth-last-child(-n+1)
+        margin-bottom: 141px
 
 .wr-for-number
     position: relative
@@ -1326,6 +1328,10 @@
     height: 618px
     img
         @include img-resp
+
+.snacks__title
+    text-transform: uppercase
+    width: 300px
 
 // Mobal-ver
 @media (max-width: 1920px)
