@@ -4,6 +4,9 @@
     width: 100%
     height: 100%
 
+html
+    scroll-behavior: auto !important
+
 *::-webkit-media-controls-panel
     display: none!important
     -webkit-appearance: none
@@ -1179,6 +1182,16 @@
 
 .hamburger-menu
     display: none
+    position: fixed
+
+.hamburger-menu-black
+    .menu__btn
+        span
+            background-color: #1F1F1F
+        span::after
+            background-color: #1F1F1F
+        span::before
+            background-color: #1F1F1F
 
 #menu__toggle
     opacity: 0
@@ -1328,6 +1341,7 @@
     height: 618px
     img
         @include img-resp
+        object-fit: cover
 
 .snacks__title
     text-transform: uppercase
@@ -1342,6 +1356,13 @@
         margin-right: 0
     .header__logo
         margin-left: 0
+    .section__news-desc
+        transform: translate(10%,-2%)
+    .section__news-number
+        left: 3rem
+    .section__news-desc::after
+        width: 80px
+        left: -55px
 @media (max-width: 1262px)
     .header__logo-offer
         white-space: normal
@@ -1410,6 +1431,18 @@
         padding-left: 0
     .contact .section__wr
         padding: 3rem 0 2rem 20px
+    .section__news-desc
+        width: 500px
+    .section__news-main
+        margin-left: 10px
+    .section__news:nth-child(2)
+        margin-top: -1.4rem
+    .section__news-desc
+        padding: 40px 35px 40px 35px
+    .section__news-desc::after
+        top: 50px
+    .news-media__item-wr2-title
+        font-size: 30px
 
 @media (max-width: 991px)
     .nav__link
@@ -1780,3 +1813,35 @@
     .tovar__wr-footer
         margin-top: 0
         position: initial
+    .section__news-main
+        margin-top: 100px
+        margin-left: 0
+    .section__news-main .section__left-title
+        width: 90%
+        font-size: 30px
+    .section__news-subtitle
+        width: auto
+    .section__news-subtitle
+        font-size: 16px
+    .section__news-wr
+        flex-direction: column
+        align-items: center
+    .section__news-img
+        width: 100%
+        height: 290px
+    .section__news-desc
+        width: 100%
+        padding: 20px 17px 17px 17px
+        transform: translate(0%,0%)
+    .section__news:nth-child(2)
+        margin-top: 4rem
+    .section__news-number
+        left: 1rem
+        top: -2.1rem
+        font-size: 100px
+    .section__news-desc::after
+        display: none
+    .section__news
+        margin-top: 100px
+    .wr-for-number
+        width: 100%
