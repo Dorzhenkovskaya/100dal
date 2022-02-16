@@ -54,6 +54,7 @@ html
     text-transform: uppercase
     color: #1F1F1F
     white-space: nowrap
+    text-align: center
 
 .header
     position: relative
@@ -1373,6 +1374,7 @@ html
     height: 758px
     img
         @include img-resp
+        object-fit: cover
 
 .section-news__wr-left-text
     margin-top: 83px
@@ -1403,6 +1405,7 @@ html
     display: flex
     align-items: center
     margin-top: 120px
+    margin-left: 7.5rem
 
 .links
     position: relative
@@ -1462,6 +1465,17 @@ html
     .section__news-desc::after
         width: 80px
         left: -55px
+    .separate
+        margin-left: 3rem
+    .section-news__wr
+        margin: 2rem 2rem 0 2rem
+    .section-news__wr-left-img
+        height: 60%
+    .section-news__wr-left-text
+        margin-top: 53px
+    .social__wr
+        margin-top: 90px
+        margin-left: 3rem
 @media (max-width: 1262px)
     .header__logo-offer
         white-space: normal
@@ -1542,6 +1556,16 @@ html
         top: 50px
     .news-media__item-wr2-title
         font-size: 30px
+    .separate
+        margin-left: 1.5rem
+    .section-news__wr-left-img
+        height: 50%
+    .separate .section__left-title
+        font-size: 40px
+    .section-news__wr-left-text
+        font-size: 16px
+    .section-news__wr-left-text p
+        margin-top: 25px
 
 @media (max-width: 991px)
     .nav__link
@@ -1635,6 +1659,29 @@ html
         width: 26rem
     .news-swiper-navigation
         width: 7rem
+    .separate .section__left-title
+        width: 100%
+    .separate
+        margin-top: 3.5rem
+        margin-left: 0
+    .separate .section__left-title
+        font-size: 35px
+    .section-news__wr
+        flex-direction: column
+        margin: 2rem 0
+    .section-news__wr-left
+        width: 100%
+        margin-right: 0
+    .section-news__wr-left-text
+        width: 100%
+    .social__wr
+        margin-top: 2rem
+        margin-left: 0
+        justify-content: center
+    .section-news__wr-btn
+        margin-top: 2rem
+    .white
+        padding-bottom: 3rem
 
 @media screen and (max-width: 575px)
     .section
@@ -1944,3 +1991,17 @@ html
         margin-top: 100px
     .wr-for-number
         width: 100%
+    .separate .section__left-title
+        font-size: 25px
+    .separate .section__left-title
+        margin-top: 30px
+    .section-news__wr
+        margin-top: 1rem
+    .section-news__wr-left-text
+        margin-top: 1rem
+    .section-news__wr-btn
+        margin-top: 1.5rem
+    .white
+        padding-bottom: 2rem
+    .section-news__wr-left-text
+        font-size: 14px
