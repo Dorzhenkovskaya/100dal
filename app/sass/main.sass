@@ -1564,6 +1564,7 @@ html
     margin-right: 43px
     img
         @include img-resp
+        object-fit: cover
 
 .column-img
     width: 201px
@@ -1571,6 +1572,7 @@ html
     margin-bottom: 43px
     img
         @include img-resp
+        object-fit: cover
 
 .section-events__text
     font-family: "Jost"
@@ -1582,6 +1584,9 @@ html
 
 .section-events__text p
     margin-top: 30px
+
+.section-events__text p:nth-child(1)
+    margin-top: 0
 
 .social-events__wr
     margin-left: 6rem
@@ -1597,6 +1602,8 @@ html
     .event__desc::after
         left: -30px
         width: 70px
+    .section-events__wr-element-img
+        width: 50%
 @media (max-width: 1549px)
     .nav__item
         margin-right: 0
@@ -1643,6 +1650,14 @@ html
         z-index: -1
     .event .section__left-title
         width: 470px
+    .separate-events
+        margin-left: 1rem
+    .section-events .section-news__wr
+        margin: 3rem 1rem 0 1rem
+    .column-img
+        width: 40%
+    .social-events__wr
+        margin-left: 1rem
 @media (max-width: 1262px)
     .header__logo-offer
         white-space: normal
@@ -1750,6 +1765,20 @@ html
         top: -2.1rem
     .event__desc::after
         left: -55px
+    .separate-events .section__left-title
+        width: 100%
+        font-size: 44px
+    .section-events__wr
+        flex-direction: column
+    .section-events__wr-element-img
+        width: 100%
+        height: 10%
+    .section-events__wr-element-column
+        width: 100%
+        margin-top: 20px
+    .column-img
+        width: 30%
+        margin-bottom: 20px
 @media (max-width: 991px)
     .nav__link
         font-size: .32rem
@@ -1885,6 +1914,8 @@ html
         margin-top: 10px
     .event__wrapper-links
         font-size: 16px
+    .section-events .section-news__wr
+        margin: 2rem 1rem 0 1rem
 @media screen and (max-width: 575px)
     .section
         min-height: 24rem
@@ -2239,3 +2270,13 @@ html
     .event__desc
         position: relative
         z-index: 2
+    .separate-events
+        margin: 4rem 0 0 0
+    .separate-events .section__left-title
+        font-size: 20px
+    .section-news__wr
+        margin: 2rem 0 0 0
+    .section-events__text
+        font-size: 14px
+    .section-events__text p
+        margin-top: 20px
