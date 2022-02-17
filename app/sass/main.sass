@@ -1449,6 +1449,89 @@ html
             content: "\e901"
             font-family: "icomoon"
 
+.event-gray
+    background: #F0F0F0
+
+.event
+    padding: 29px 39px 29px 39px
+    &__wr
+        display: flex
+        justify-content: space-between
+
+.event .section__left-title
+    font-size: 48px
+    margin-top: 78px
+
+.event__wrapper
+    display: flex
+    margin-top: 29px
+
+.event__wrapper-links
+    font-family: "Source Sans Pro"
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
+    line-height: 121.19%
+    color: #A5A7B6
+    margin-right: 29px
+
+.event__wrapper-links-active
+    color: #D8CA9C
+
+.event__wr-element
+    position: relative
+    .wr-for-number
+        position: absolute
+        bottom: 5rem
+        left: 20rem
+        z-index: 1
+
+.event__img
+    width: 798px
+    height: 826px
+    img
+        @include img-resp
+        object-fit: cover
+
+.event__desc
+    background: #F5F5F5
+    padding: 43px 45px 50px 46px
+    width: 610px
+    &::after
+        content: ''
+        width: 105.56px
+        height: 0px
+        position: absolute
+        top: 54px
+        left: -80px
+        border: 1px solid #9B967E
+
+.event__number
+    font-family: Lora
+    font-style: normal
+    font-weight: normal
+    font-size: 140px
+    line-height: 108.19%
+    text-transform: uppercase
+    color: transparent
+    -webkit-text-stroke: 1px#D8CA9C
+    position: absolute
+    top: 0
+    left: -17rem
+
+.event__desc .news-media__item-wr2-title
+    text-transform: uppercase
+
+.event__desc-subtitle
+    font-family: "Source Sans Pro"
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
+    line-height: 121.19%
+    color: #A5A7B6
+    margin-top: 17px
+    margin-bottom: 63px
+
 // Mobal-ver
 @media (max-width: 1920px)
     .header__logo-offer
