@@ -1591,6 +1591,87 @@ html
 .social-events__wr
     margin-left: 6rem
 
+.slider
+    max-width: 100% !important
+    margin-left: 0 !important
+    margin-right: 0 !important
+
+.slider__indicators
+    display: none
+
+.slider__control
+    width: 105px !important
+    height: 105px !important
+    background: rgba(0, 0, 0, 0.67) !important
+    border: 1px solid #565656
+    border-radius: 100%
+    opacity: 1 !important
+    top: 90% !important
+    &_prev
+        left: 40% !important
+    &_next
+        right: 40% !important
+    &::before
+        width: 26px !important
+    &_next::before
+        background: url("../img/icon/swiper-right.svg") center no-repeat !important
+    &_prev::before
+        background: url("../img/icon/swiper-left.svg") center no-repeat !important
+
+.slider__items
+    counter-reset: slide
+
+.slider__item
+    counter-increment: slide
+    display: flex
+    background-color: #eee
+
+.slider img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.slider__thumbnails
+    display: flex
+    flex-flow: row wrap
+    align-content: center
+    max-width: 100%
+    height: 100%
+    background: #FFFFFF
+    padding: 37px 37px 0 37px
+    &-item
+        line-height: 0
+        margin: 0 25px 10px 0
+        overflow: hidden
+        transition: 0.15s opacity ease-in-out
+        width: 308px
+        height: 184px
+    &-item:nth-child(4n)
+        margin-right: 0
+    &-item:hover
+        opacity: 1
+    &-item>img
+        display: inline-block
+        width: 100%
+        height: auto
+
+.slider__wrapper
+    height: 600px
+
+.modal-preview
+    .modal-content
+        position: relative
+        background-color: #FFFFFF
+        margin: auto
+        padding: 0
+        width: 72%
+        height: 75%
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
+        -webkit-animation-name: animatetop
+        -webkit-animation-duration: 0.4s
+        animation-name: animatetop
+        animation-duration: 0.4s
+
 // Mobal-ver
 @media (max-width: 1920px)
     .header__logo-offer

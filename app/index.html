@@ -21,6 +21,8 @@
    <meta name="msapplication-TileColor" content="#da532c">
    <meta name="theme-color" content="#ffffff">
    <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
+   <link rel="stylesheet" href="css/simple-adaptive-slider.css">
+   <script defer src="js/simple-adaptive-slider.js"></script>
    <script src="js/app.min.js?var=1.0"></script> 
    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
 
@@ -167,7 +169,7 @@
                   <div class="section__line"></div>
                </div>
             </div>
-            <div class="section__right">
+            <div id="myBtn_1" class="section__right">
                <div class="swiper activity-media__content-wrap" id="bar-slider">
                   <div class="swiper-wrapper activity-media__content">
                     <div class="swiper-slide activity-media__item">
@@ -198,7 +200,7 @@
             </div>
          </section>
    
-         <section id="cold-room" class="section section-black">
+         <section id="myBtn_cold" class="section section-black">
             <div class="section__left">
                <div class="section__left-title">
                   Холодная комната
@@ -224,7 +226,7 @@
                   <div class="section__line"></div>
                </div>
             </div>
-            <div class="section__right">
+            <div id="myBtn_cold" class="section__right">
                <div class="swiper activity-media__content-wrap" id="activity-slider">
                   <div class="swiper-wrapper activity-media__content">
                     <div class="swiper-slide activity-media__item">
@@ -275,7 +277,7 @@
                   <div class="section__line"></div>
                </div>
             </div>
-            <div class="section__right">
+            <div id="myBtn_big" class="section__right">
                <div class="swiper activity-media__content-wrap" id="warm-slider">
                   <div class="swiper-wrapper activity-media__content">
                     <div class="swiper-slide activity-media__item">
@@ -341,7 +343,7 @@
                   <div class="section__line"></div>
                </div>
             </div>
-            <div class="section__right">
+            <div id="myBtn_shop" class="section__right">
                <div class="swiper activity-media__content-wrap" id="shop-slider">
                   <div class="swiper-wrapper activity-media__content">
                     <div class="swiper-slide activity-media__item">
@@ -411,7 +413,7 @@
                   <div class="section__line"></div>
                </div>
             </div>
-            <div class="section__right">
+            <div id="myBtn_food" class="section__right">
                <div class="swiper activity-media__content-wrap" id="snacks-slider">
                   <div class="swiper-wrapper activity-media__content">
                     <div class="swiper-slide activity-media__item">
@@ -707,26 +709,281 @@
     
    </div>
 
-   <div id="myModal_1" class="modal">
+   <div id="myModal_1" class="modal modal-preview">
 
       <div class="modal-content">
          <span id="close_1" class="close">&times;</span>
-         <div class="swiper activity-media__content-wrap" id="img-slider">
-            <div class="swiper-wrapper activity-media__content">
-              <div class="swiper-slide img-media__item">
-                 <img src="img/gallery/gallery-1.png" alt="">
-              </div>
-              <div class="swiper-slide img-media__item">
-               12345
+         <div class="slider__container">
+            <!-- slider -->
+            <div class="slider">
+            <div class="slider__wrapper">
+               <div class="slider__items">
+                  <div class="slider__item">
+                     <img src="img/block/bar/1.jpg" alt="..." loading="lazy">
+                  </div>
+                  <div class="slider__item">
+                     <img src="img/block/bar/2.jpg" alt="..." loading="lazy">
+                  </div>
+                  <div class="slider__item">
+                     <img src="img/block/bar/3.jpg" alt="..." loading="lazy">
+                  </div>
+                  <div class="slider__item">
+                     <img src="img/block/bar/6.jpg" alt="..." loading="lazy">
+                  </div>
+                  <div class="slider__item">
+                     <img src="img/block/bar/17.jpg" alt="..." loading="lazy">
+                  </div>
+                  <div class="slider__item">
+                     <img src="img/block/bar/18.jpg" alt="..." loading="lazy">
+                  </div>
             </div>
+            <a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a>
+            <a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a>
             </div>
-        </div>
-        <div class="gallery__pagination">
-         <div class="swiper-button-prev gallery-prev"></div>
-         <div class="swiper-button-next gallery-next"></div>
-        </div>
-      </div>
+            <!-- thumbnails -->
+            <div class="slider__thumbnails">
+               <div class="slider__thumbnails-item" data-slide-to="0">
+                  <img src="img/block/bar/1.jpg" alt="..." width="100" height="143" loading="lazy">
+               </div>
+               <div class="slider__thumbnails-item" data-slide-to="1">
+                  <img src="img/block/bar/2.jpg" alt="..." width="100" height="143" loading="lazy">
+               </div>
+               <div class="slider__thumbnails-item" data-slide-to="2">
+                  <img src="img/block/bar/3.jpg" alt="..." width="100" height="143" loading="lazy">
+               </div>
+               <div class="slider__thumbnails-item" data-slide-to="3">
+                  <img src="img/block/bar/6.jpg" alt="..." width="100" height="143" loading="lazy">
+               </div>
+               <div class="slider__thumbnails-item" data-slide-to="4">
+                  <img src="img/block/bar/17.jpg" alt="..." width="100" height="143" loading="lazy">
+               </div>
+               <div class="slider__thumbnails-item" data-slide-to="5">
+                  <img src="img/block/bar/18.jpg" alt="..." width="100" height="143" loading="lazy">
+               </div>
+            </div>
+        </div>        
+         </div>
     
+      </div>
+
+   </div>
+
+   <div id="myModal_cold" class="modal modal-preview">
+
+      <div class="modal-content">
+         <span id="close_cold" class="close">&times;</span>
+         <div class="slider__container">
+            <!-- slider -->
+            <div class="slider slider-cold">
+            <div class="slider__wrapper">
+               <div class="slider__items">
+                  <div class="slider__item">
+                     <img src="img/block/cold/20.jpg" alt="..." loading="lazy">
+                  </div>
+                  <div class="slider__item">
+                     <img src="img/block/cold/21.jpg" alt="..." loading="lazy">
+                  </div>
+                  <div class="slider__item">
+                     <img src="img/block/cold/22.jpg" alt="..." loading="lazy">
+                  </div>
+            </div>
+            <a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a>
+            <a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a>
+            </div>
+            <!-- thumbnails -->
+            <div class="slider__thumbnails slider__thumbnails-cold">
+               <div class="slider__thumbnails-item slider__thumbnails-item-cold" data-slide-to="0">
+                  <img src="img/block/cold/20.jpg" alt="..." width="100" height="143" loading="lazy">
+               </div>
+               <div class="slider__thumbnails-item slider__thumbnails-item-cold" data-slide-to="1">
+                  <img src="img/block/cold/21.jpg" alt="..." width="100" height="143" loading="lazy">
+               </div>
+               <div class="slider__thumbnails-item slider__thumbnails-item-cold" data-slide-to="2">
+                  <img src="img/block/cold/22.jpg" alt="..." width="100" height="143" loading="lazy">
+               </div>
+            </div>
+        </div>        
+         </div>
+    
+      </div>
+      
+   </div>
+
+   <div id="myModal_big" class="modal modal-preview">
+
+      <div class="modal-content">
+         <span id="close_big" class="close">&times;</span>
+         <div class="slider__container">
+            <!-- slider -->
+            <div class="slider slider-big">
+            <div class="slider__wrapper">
+               <div class="slider__items">
+                  <div class="slider__item">
+                     <img src="img/block/big/12.jpg" alt="..." loading="lazy">
+                  </div>
+                  <div class="slider__item">
+                     <img src="img/block/big/13.jpg" alt="..." loading="lazy">
+                  </div>
+                  <div class="slider__item">
+                     <img src="img/block/big/14.jpg" alt="..." loading="lazy">
+                  </div>
+                  <div class="slider__item">
+                     <img src="img/block/big/15.jpg" alt="..." loading="lazy">
+                  </div>
+                  <div class="slider__item">
+                     <img src="img/block/big/16.jpg" alt="..." loading="lazy">
+                  </div>
+            </div>
+            <a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a>
+            <a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a>
+            </div>
+            <!-- thumbnails -->
+            <div class="slider__thumbnails slider__thumbnails-big">
+               <div class="slider__thumbnails-item slider__thumbnails-item-big" data-slide-to="0">
+                  <img src="img/block/big/12.jpg" alt="..." width="100" height="143" loading="lazy">
+               </div>
+               <div class="slider__thumbnails-item slider__thumbnails-item-big" data-slide-to="1">
+                  <img src="img/block/big/13.jpg" alt="..." width="100" height="143" loading="lazy">
+               </div>
+               <div class="slider__thumbnails-item slider__thumbnails-item-big" data-slide-to="2">
+                  <img src="img/block/big/14.jpg" alt="..." width="100" height="143" loading="lazy">
+               </div>
+               <div class="slider__thumbnails-item slider__thumbnails-item-big" data-slide-to="3">
+                  <img src="img/block/big/15.jpg" alt="..." width="100" height="143" loading="lazy">
+               </div>
+               <div class="slider__thumbnails-item slider__thumbnails-item-big" data-slide-to="4">
+                  <img src="img/block/big/16.jpg" alt="..." width="100" height="143" loading="lazy">
+               </div>
+            </div>
+        </div>        
+         </div>
+    
+      </div>
+      
+   </div>
+
+   <div id="myModal_shop" class="modal modal-preview">
+
+      <div class="modal-content">
+         <span id="close_shop" class="close">&times;</span>
+         <div class="slider__container">
+            <!-- slider -->
+            <div class="slider slider-shop">
+            <div class="slider__wrapper">
+               <div class="slider__items">
+                  <div class="slider__item">
+                     <img src="img/block/shop/1.jpg" alt="..." loading="lazy">
+                  </div>
+                  <div class="slider__item">
+                     <img src="img/block/shop/2.jpg" alt="..." loading="lazy">
+                  </div>
+                  <div class="slider__item">
+                     <img src="img/block/shop/3.jpg" alt="..." loading="lazy">
+                  </div>
+                  <div class="slider__item">
+                     <img src="img/block/shop/4.jpg" alt="..." loading="lazy">
+                  </div>
+                  <div class="slider__item">
+                     <img src="img/block/shop/5.jpg" alt="..." loading="lazy">
+                  </div>
+                  <div class="slider__item">
+                     <img src="img/block/shop/6.jpg" alt="..." loading="lazy">
+                  </div>
+                  <div class="slider__item">
+                     <img src="img/block/shop/7.jpg" alt="..." loading="lazy">
+                  </div>
+                  <div class="slider__item">
+                     <img src="img/block/shop/8.jpg" alt="..." loading="lazy">
+                  </div>
+                  <div class="slider__item">
+                     <img src="img/block/shop/11.jpg" alt="..." loading="lazy">
+                  </div>
+                  <div class="slider__item">
+                     <img src="img/block/shop/12.jpg" alt="..." loading="lazy">
+                  </div>
+            </div>
+            <a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a>
+            <a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a>
+            </div>
+            <!-- thumbnails -->
+            <div class="slider__thumbnails slider__thumbnails-shop">
+               <div class="slider__thumbnails-item slider__thumbnails-item-shop" data-slide-to="0">
+                  <img src="img/block/shop/1.jpg" alt="..." width="100" height="143" loading="lazy">
+               </div>
+               <div class="slider__thumbnails-item slider__thumbnails-item-shop" data-slide-to="1">
+                  <img src="img/block/shop/2.jpg" alt="..." width="100" height="143" loading="lazy">
+               </div>
+               <div class="slider__thumbnails-item slider__thumbnails-item-shop" data-slide-to="2">
+                  <img src="img/block/shop/3.jpg" alt="..." width="100" height="143" loading="lazy">
+               </div>
+               <div class="slider__thumbnails-item slider__thumbnails-item-shop" data-slide-to="3">
+                  <img src="img/block/shop/4.jpg" alt="..." width="100" height="143" loading="lazy">
+               </div>
+               <div class="slider__thumbnails-item slider__thumbnails-item-shop" data-slide-to="4">
+                  <img src="img/block/shop/5.jpg" alt="..." width="100" height="143" loading="lazy">
+               </div>
+               <div class="slider__thumbnails-item slider__thumbnails-item-shop" data-slide-to="5">
+                  <img src="img/block/shop/6.jpg" alt="..." width="100" height="143" loading="lazy">
+               </div>
+               <div class="slider__thumbnails-item slider__thumbnails-item-shop" data-slide-to="6">
+                  <img src="img/block/shop/7.jpg" alt="..." width="100" height="143" loading="lazy">
+               </div>
+               <div class="slider__thumbnails-item slider__thumbnails-item-shop" data-slide-to="7">
+                  <img src="img/block/shop/8.jpg" alt="..." width="100" height="143" loading="lazy">
+               </div>
+               <div class="slider__thumbnails-item slider__thumbnails-item-shop" data-slide-to="8">
+                  <img src="img/block/shop/11.jpg" alt="..." width="100" height="143" loading="lazy">
+               </div>
+               <div class="slider__thumbnails-item slider__thumbnails-item-shop" data-slide-to="9">
+                  <img src="img/block/shop/12.jpg" alt="..." width="100" height="143" loading="lazy">
+               </div>
+            </div>
+        </div>        
+         </div>
+    
+      </div>
+      
+   </div>
+
+   <div id="myModal_food" class="modal modal-preview">
+
+      <div class="modal-content">
+         <span id="close_food" class="close">&times;</span>
+         <div class="slider__container">
+            <!-- slider -->
+            <div class="slider slider-food">
+            <div class="slider__wrapper">
+               <div class="slider__items">
+                  <div class="slider__item">
+                     <img src="img/block/snacks-1.png" alt="..." loading="lazy">
+                  </div>
+                  <div class="slider__item">
+                     <img src="img/block/snacks-2.png" alt="..." loading="lazy">
+                  </div>
+                  <div class="slider__item">
+                     <img src="img/block/snacks-3.png" alt="..." loading="lazy">
+                  </div>
+            </div>
+            <a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a>
+            <a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a>
+            </div>
+            <!-- thumbnails -->
+            <div class="slider__thumbnails slider__thumbnails-food">
+               <div class="slider__thumbnails-item slider__thumbnails-item-food" data-slide-to="0">
+                  <img src="img/block/snacks-1.png" alt="..." width="100" height="143" loading="lazy">
+               </div>
+               <div class="slider__thumbnails-item slider__thumbnails-item-food" data-slide-to="1">
+                  <img src="img/block/snacks-2.png" alt="..." width="100" height="143" loading="lazy">
+               </div>
+               <div class="slider__thumbnails-item slider__thumbnails-item-food" data-slide-to="2">
+                  <img src="img/block/snacks-3.png" alt="..." width="100" height="143" loading="lazy">
+               </div>
+            </div>
+        </div>        
+         </div>
+    
+      </div>
+      
    </div>
 
    <script src="js/swiper-bundle.min.js"></script>
@@ -773,7 +1030,7 @@
          myMap.controls.remove('rulerControl');
          myMap.controls.remove('searchControl');
       });
-  </script>
+   </script>
 </body>
 
 </html>
