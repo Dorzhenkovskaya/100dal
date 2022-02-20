@@ -82,15 +82,18 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
       });
+
       const swiperPrev = document.getElementById('swiperPrev')
       const swiperNext = document.getElementById('swiperNext')
 
+     if (swiperPrev && swiperNext) {
       swiperPrev.addEventListener('click', () => {
         eventsSlider.slidePrev();
       })
       swiperNext.addEventListener('click', () => {
         eventsSlider.slideNext();
       })
+     }
 
       const eventsPhotoSlider = new Swiper('#events-photo-slider', {
         grid: {
@@ -112,12 +115,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      swiperPrev.addEventListener('click', () => {
-        eventsPhotoSlider.slidePrev();
-      })
-      swiperNext.addEventListener('click', () => {
-        eventsPhotoSlider.slideNext();
-      })
+      // swiperPrev.addEventListener('click', () => {
+      //   eventsPhotoSlider.slidePrev();
+      // })
+      // swiperNext.addEventListener('click', () => {
+      //   eventsPhotoSlider.slideNext();
+      // })
 
       const newsSlider = new Swiper('#news-slider', {
         grid: {
@@ -155,17 +158,19 @@ document.addEventListener('DOMContentLoaded', () => {
       var btn = document.getElementById("myBtn");
       var span = document.getElementsByClassName("close")[0];
 
+     if(modal && btn && span) {
       btn.onclick = function() {
-          modal.style.display = "block";
-      }
-      span.onclick = function() {
-          modal.style.display = "none";
-      }
-      window.onclick = function(event) {
-          if (event.target == modal) {
-              modal.style.display = "none";
-          }
-      }
+        modal.style.display = "block";
+    }
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+     }
 
       const swiperNewsPrev = document.getElementById('swiperNewsPrev')
       const swiperNewsNext = document.getElementById('swiperNewsNext')
@@ -360,11 +365,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       btn_1.onclick = function() {
         showModal(modal_1);
-      }
+      };
 
       span_1.onclick = function() {
         closeModal(modal_1);
-      }
+      };
 
       // Галерея холодная
       var modal_cold = document.getElementById('myModal_cold');
@@ -373,7 +378,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       btn_cold.onclick = function() {
         showModal(modal_cold);
-      }
+      };
 
       span_cold.onclick = function() {
         closeModal(modal_cold);

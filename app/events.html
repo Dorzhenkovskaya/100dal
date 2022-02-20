@@ -21,7 +21,9 @@
    <meta name="msapplication-TileColor" content="#da532c">
    <meta name="theme-color" content="#ffffff">
    <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
-   <script src="js/app.min.js?var=1.0"></script> 
+   <link rel="stylesheet" href="css/simple-adaptive-slider.css">
+   <script defer src="js/simple-adaptive-slider.js"></script>
+   <script src="js/appEvent.js?var=1.0"></script> 
    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
 
 </head>
@@ -126,7 +128,7 @@
                   </div>
                </div>
                <div class="event__wr-element">
-                  <div class="event__img">
+                  <div id="myBtn_event" class="event__img">
                      <img src="img/events/event1.png" alt="">
                   </div>
                </div>
@@ -161,7 +163,7 @@
                   </div>
                </div>
                <div class="event__wr-element">
-                  <div class="event__img">
+                  <div id="myBtn_event1" class="event__img">
                      <img src="img/events/event2.png" alt="">
                   </div>
                </div>
@@ -192,7 +194,7 @@
                   </div>
                </div>
                <div class="event__wr-element">
-                  <div class="event__img">
+                  <div id="myBtn_event3" class="event__img">
                      <img src="img/events/event3.png" alt="">
                   </div>
                </div>
@@ -230,7 +232,7 @@
                   </div>
                </div>
                <div class="event__wr-element">
-                  <div class="event__img">
+                  <div id="myBtn_event4" class="event__img">
                      <img src="img/events/event4.png" alt="">
                   </div>
                </div>
@@ -239,6 +241,246 @@
       </section>
 
    </main>
+
+   <div class="wrapper-for-modal">
+      <div id="myModal_event" class="modal modal-preview">
+   
+         <div class="modal-content modal-content-mini">
+            <span id="close_event" class="close">&times;</span>
+            <div class="slider__container">
+               <!-- slider -->
+               <div class="slider slider-event">
+               <div class="slider__wrapper">
+                  <div class="slider__items">
+                     <div class="slider__item">
+                        <img src="img/events/event1.png" alt="..." loading="lazy">
+                     </div>
+                     <div class="slider__item">
+                        <img src="img/events/event1.png" alt="..." loading="lazy">
+                     </div>
+                     <div class="slider__item">
+                        <img src="img/events/event1.png" alt="..." loading="lazy">
+                     </div>
+                     <div class="slider__item">
+                        <img src="img/events/event1.png" alt="..." loading="lazy">
+                     </div>
+                     <div class="slider__item">
+                        <img src="img/events/event1.png" alt="..." loading="lazy">
+                     </div>
+                     <div class="slider__item">
+                        <img src="img/events/event1.png" alt="..." loading="lazy">
+                     </div>
+               </div>
+               <a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a>
+               <a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a>
+               </div>
+               <!-- thumbnails -->
+               <div class="slider__thumbnails slider__thumbnails-event">
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event" data-slide-to="0">
+                     <img src="img/events/event1.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event" data-slide-to="1">
+                     <img src="img/events/event1.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event" data-slide-to="2">
+                     <img src="img/events/event1.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event" data-slide-to="3">
+                     <img src="img/events/event1.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event" data-slide-to="4">
+                     <img src="img/events/event1.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event" data-slide-to="5">
+                     <img src="img/events/event1.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+               </div>
+           </div>        
+            </div>
+       
+         </div>
+         
+      </div>   
+
+      <div id="myModal_event1" class="modal modal-preview">
+   
+         <div class="modal-content modal-content-mini">
+            <span id="close_event1" class="close">&times;</span>
+            <div class="slider__container">
+               <!-- slider -->
+               <div class="slider slider-event slider-event1">
+               <div class="slider__wrapper">
+                  <div class="slider__items">
+                     <div class="slider__item">
+                        <img src="img/events/event2.png" alt="..." loading="lazy">
+                     </div>
+                     <div class="slider__item">
+                        <img src="img/events/event2.png" alt="..." loading="lazy">
+                     </div>
+                     <div class="slider__item">
+                        <img src="img/events/event2.png" alt="..." loading="lazy">
+                     </div>
+                     <div class="slider__item">
+                        <img src="img/events/event2.png" alt="..." loading="lazy">
+                     </div>
+                     <div class="slider__item">
+                        <img src="img/events/event2.png" alt="..." loading="lazy">
+                     </div>
+                     <div class="slider__item">
+                        <img src="img/events/event2.png" alt="..." loading="lazy">
+                     </div>
+               </div>
+               <a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a>
+               <a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a>
+               </div>
+               <!-- thumbnails -->
+               <div class="slider__thumbnails slider__thumbnails-event slider__thumbnails-event1">
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event slider__thumbnails-item-event1" data-slide-to="0">
+                     <img src="img/events/event2.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event slider__thumbnails-item-event1" data-slide-to="1">
+                     <img src="img/events/event2.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event slider__thumbnails-item-event1" data-slide-to="2">
+                     <img src="img/events/event2.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event slider__thumbnails-item-event1" data-slide-to="3">
+                     <img src="img/events/event2.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event slider__thumbnails-item-event1" data-slide-to="4">
+                     <img src="img/events/event2.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event slider__thumbnails-item-event1" data-slide-to="5">
+                     <img src="img/events/event2.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+               </div>
+           </div>        
+            </div>
+       
+         </div>
+         
+      </div>   
+
+      <div id="myModal_event3" class="modal modal-preview">
+   
+         <div class="modal-content modal-content-mini">
+            <span id="close_event3" class="close">&times;</span>
+            <div class="slider__container">
+               <!-- slider -->
+               <div class="slider slider-event slider-event3">
+               <div class="slider__wrapper">
+                  <div class="slider__items">
+                     <div class="slider__item">
+                        <img src="img/events/event3.png" alt="..." loading="lazy">
+                     </div>
+                     <div class="slider__item">
+                        <img src="img/events/event3.png" alt="..." loading="lazy">
+                     </div>
+                     <div class="slider__item">
+                        <img src="img/events/event3.png" alt="..." loading="lazy">
+                     </div>
+                     <div class="slider__item">
+                        <img src="img/events/event3.png" alt="..." loading="lazy">
+                     </div>
+                     <div class="slider__item">
+                        <img src="img/events/event3.png" alt="..." loading="lazy">
+                     </div>
+                     <div class="slider__item">
+                        <img src="img/events/event3.png" alt="..." loading="lazy">
+                     </div>
+               </div>
+               <a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a>
+               <a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a>
+               </div>
+               <!-- thumbnails -->
+               <div class="slider__thumbnails slider__thumbnails-event slider__thumbnails-event3">
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event slider__thumbnails-item-event3" data-slide-to="0">
+                     <img src="img/events/event3.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event slider__thumbnails-item-event3" data-slide-to="1">
+                     <img src="img/events/event3.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event slider__thumbnails-item-event3" data-slide-to="2">
+                     <img src="img/events/event3.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event slider__thumbnails-item-event3" data-slide-to="3">
+                     <img src="img/events/event3.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event slider__thumbnails-item-event3" data-slide-to="4">
+                     <img src="img/events/event3.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event slider__thumbnails-item-event3" data-slide-to="5">
+                     <img src="img/events/event3.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+               </div>
+           </div>        
+            </div>
+       
+         </div>
+         
+      </div> 
+
+      <div id="myModal_event4" class="modal modal-preview">
+   
+         <div class="modal-content modal-content-mini">
+            <span id="close_event4" class="close">&times;</span>
+            <div class="slider__container">
+               <!-- slider -->
+               <div class="slider slider-event slider-event4">
+               <div class="slider__wrapper">
+                  <div class="slider__items">
+                     <div class="slider__item">
+                        <img src="img/events/event4.png" alt="..." loading="lazy">
+                     </div>
+                     <div class="slider__item">
+                        <img src="img/events/event4.png" alt="..." loading="lazy">
+                     </div>
+                     <div class="slider__item">
+                        <img src="img/events/event4.png" alt="..." loading="lazy">
+                     </div>
+                     <div class="slider__item">
+                        <img src="img/events/event4.png" alt="..." loading="lazy">
+                     </div>
+                     <div class="slider__item">
+                        <img src="img/events/event4.png" alt="..." loading="lazy">
+                     </div>
+                     <div class="slider__item">
+                        <img src="img/events/event4.png" alt="..." loading="lazy">
+                     </div>
+               </div>
+               <a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a>
+               <a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a>
+               </div>
+               <!-- thumbnails -->
+               <div class="slider__thumbnails slider__thumbnails-event slider__thumbnails-event4">
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event slider__thumbnails-item-event4" data-slide-to="0">
+                     <img src="img/events/event4.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event slider__thumbnails-item-event4" data-slide-to="1">
+                     <img src="img/events/event4.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event slider__thumbnails-item-event4" data-slide-to="2">
+                     <img src="img/events/event4.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event slider__thumbnails-item-event4" data-slide-to="3">
+                     <img src="img/events/event4.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event slider__thumbnails-item-event4" data-slide-to="4">
+                     <img src="img/events/event4.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event slider__thumbnails-item-event4" data-slide-to="5">
+                     <img src="img/events/event4.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+               </div>
+           </div>        
+            </div>
+       
+         </div>
+         
+      </div> 
+   </div>
+
+   <script src="js/swiper-bundle.min.js"></script>
 </body>
 
 </html>

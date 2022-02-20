@@ -1676,6 +1676,24 @@ html
     max-width: 100vw
     overflow: hidden
 
+.slider-event
+    .slider__indicators
+        display: none
+    .slider__control_prev
+        left: 35% !important
+    .slider__control_next
+        right: 35% !important
+    .slider__thumbnails-item
+        width: 236px
+        height: 239px
+        margin: 0 0 18px 0
+    .slider__thumbnails
+        padding: 20px 32px 0 26px
+        justify-content: space-between
+
+.modal-content-mini
+    width: 42% !important
+
 // Mobal-ver
 @media (max-width: 1920px)
     .header__logo-offer
@@ -1689,10 +1707,10 @@ html
         width: 70px
     .section-events__wr-element-img
         width: 50%
-    .slider__thumbnails-item:nth-child(3n)
-        margin-right: 0
-    .slider__thumbnails-item:nth-child(4n)
-        margin: 0 25px 10px 0
+    // .slider__thumbnails-item:nth-child(3n)
+    //     margin-right: 0
+    // .slider__thumbnails-item:nth-child(4n)
+    //     margin: 0 25px 10px 0
     .slider__indicators
         display: none !important
     .slider__thumbnails
@@ -1881,6 +1899,20 @@ html
         margin: 0 25px 10px 0
     .slider__thumbnails-item:nth-child(2n)
         margin-right: 0
+    .slider-event
+        .slider__wrapper
+            height: 431px
+    .slider-event .slider__control_next
+        right: 5%!important
+    .slider-event .slider__control_prev
+        left: 5%!important
+    .slider-event .slider__control
+        top: 85% !important
+    .slider-event .slider__thumbnails-item
+        width: 170px
+        height: 175px
+    .slider-event .slider__thumbnails-item:nth-child(3n)
+        margin-right: 0
 
 @media (max-width: 991px)
     .nav__link
@@ -2026,6 +2058,10 @@ html
     .slider__thumbnails-item
         width: 208px
         height: 117px
+    .slider-event .slider__wrapper
+        height: 411px
+    .slider-event .slider__thumbnails-item
+        width: 160px
 @media screen and (max-width: 575px)
     .section
         min-height: 24rem
@@ -2405,3 +2441,14 @@ html
         height: 100px
     .slider__thumbnails
         justify-content: space-between
+    .slider-event .slider__wrapper
+        height: 180px
+    .slider-event .slider__control
+        width: 54px !important
+        height: 54px !important
+    .slider-event .slider__control
+        top: 83%!important
+    .slider-event .slider__thumbnails
+        padding: 20px 15px 0 15px
+    .slider-event .slider__thumbnails-item
+        height: 150px
