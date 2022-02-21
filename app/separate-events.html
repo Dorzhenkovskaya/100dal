@@ -21,7 +21,9 @@
    <meta name="msapplication-TileColor" content="#da532c">
    <meta name="theme-color" content="#ffffff">
    <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
-   <script src="js/app.min.js?var=1.0"></script> 
+   <link rel="stylesheet" href="css/simple-adaptive-slider.css">
+   <script defer src="js/simple-adaptive-slider.js"></script>
+   <script src="js/appEventSeparate1.js?var=1.0"></script> 
    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
 
 </head>
@@ -52,7 +54,7 @@
             <div class="col-lg-3 col-md-3 col-sm-3 col-3">
 
                <div class="header__logo">
-                  <a href="#" class="logo">
+                  <a href="https://onlinevitrina.100dal.ru/" class="logo">
                      <img class="logo__img" src="img/logo.svg" alt="logo">
                   </a>
 
@@ -109,7 +111,7 @@
          <div class="container">
             <div class="section-news__wr">
                <div class="section-news__wr-left">
-                  <div class="section-events__wr">
+                  <div id="myBtn_event5" class="section-events__wr">
                      <div class="section-events__wr-element-img">
                         <img src="img/events/event1.png" alt="">
                      </div>
@@ -155,7 +157,7 @@
                   </div>
                </div>
                <div class="section-news__wr-btn">
-                  <a class="btn-light" href="https://alcotorg.bikstart.ru/">
+                  <a class="btn-light" href="https://onlinevitrina.100dal.ru/">
                      Посмотреть онлайн-магазин
                   </a>
                </div>
@@ -193,6 +195,67 @@
          </div>
       </section>
    </main>
+
+   <div class="wrapper-for-modal">
+      <div id="myModal_event5" class="modal modal-preview">
+   
+         <div class="modal-content modal-content-mini">
+            <span id="close_event5" class="close">&times;</span>
+            <div class="slider__container">
+               <!-- slider -->
+               <div class="slider slider-event slider-event5">
+               <div class="slider__wrapper">
+                  <div class="slider__items">
+                     <div class="slider__item">
+                        <img src="img/events/event1.png" alt="..." loading="lazy">
+                     </div>
+                     <div class="slider__item">
+                        <img src="img/events/event1.png" alt="..." loading="lazy">
+                     </div>
+                     <div class="slider__item">
+                        <img src="img/events/event1.png" alt="..." loading="lazy">
+                     </div>
+                     <div class="slider__item">
+                        <img src="img/events/event1.png" alt="..." loading="lazy">
+                     </div>
+                     <div class="slider__item">
+                        <img src="img/events/event1.png" alt="..." loading="lazy">
+                     </div>
+                     <div class="slider__item">
+                        <img src="img/events/event1.png" alt="..." loading="lazy">
+                     </div>
+               </div>
+               <a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a>
+               <a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a>
+               </div>
+               <!-- thumbnails -->
+               <div class="slider__thumbnails slider__thumbnails-event slider__thumbnails-event5">
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event slider__thumbnails-item-event5" data-slide-to="0">
+                     <img src="img/events/event1.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event slider__thumbnails-item-event5" data-slide-to="1">
+                     <img src="img/events/event1.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event slider__thumbnails-item-event5" data-slide-to="2">
+                     <img src="img/events/event1.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event slider__thumbnails-item-event5" data-slide-to="3">
+                     <img src="img/events/event1.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event slider__thumbnails-item-event5" data-slide-to="4">
+                     <img src="img/events/event1.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+                  <div class="slider__thumbnails-item slider__thumbnails-item-event slider__thumbnails-item-event5" data-slide-to="5">
+                     <img src="img/events/event1.png" alt="..." width="100" height="143" loading="lazy">
+                  </div>
+               </div>
+           </div>        
+            </div>
+       
+         </div>
+         
+      </div> 
+   </div>
 </body>
 
 </html>
