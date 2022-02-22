@@ -1985,6 +1985,19 @@ html
         width: 40%
     .social-events__wr
         margin-left: 1rem
+@media (max-width: 1500px)
+    .slider-event .slider__control_prev
+        left: 30%!important
+    .slider-event .slider__control_next
+        right: 30%!important
+@media (max-width: 1485px)
+    .slider__control_next
+        right: 30%!important
+    .slider__control_prev
+        left: 30%!important
+@media (max-width: 1352px)
+    .slider__thumbnails-item:nth-child(3n)
+        margin-right: 25px
 @media (max-width: 1262px)
     .header__logo-offer
         white-space: normal
@@ -2129,11 +2142,31 @@ html
     .slider-event .slider__thumbnails-item:nth-child(3n)
         margin-right: 0
 
+@media (max-width: 1106px)
+    .header__logo
+        flex-direction: column
+    .header__logo-offer
+        margin-left: 0
+@media (max-width: 1070px)
+    .hamburger-menu
+        display: block
+    .header__logo-offer
+        display: none
+    .header__nav
+        display: none
+    .header__logo
+        display: block
+        position: absolute
+        top: 0px !important
+        right: 1rem
+        margin-top: 10px
 @media (max-width: 991px)
     .nav__link
         font-size: .32rem
     .header__logo
         flex-direction: column
+    .header__logo-offer
+        margin-left: 0
     .content-2 .main-banner-section-content
         width: 90%
         font-size: 16px
@@ -2277,6 +2310,125 @@ html
         height: 411px
     .slider-event .slider__thumbnails-item
         width: 160px
+    .hamburger-menu
+        display: block
+    .header__logo-offer
+        display: none
+    .header__nav
+        display: none
+    .header__logo
+        display: block
+        position: absolute
+        top: 0px !important
+        right: 1rem
+        margin-top: 10px
+    .event
+        padding: 120px 10px 29px 10px
+    .event
+        padding: 80px 10px 29px 10px
+    .event__wr
+        flex-direction: column
+    .event__wr-element-img
+        display: flex
+        flex-direction: column-reverse
+    .event__wr-element .wr-for-number
+        position: static
+    .event .section__left-title
+        font-size: 32px
+        width: 100%
+    .event__wrapper
+        margin-top: 20px
+        margin-bottom: 90px
+    .event__wrapper-links
+        font-size: 14px
+    .event__desc::after
+        display: none
+    .event__desc
+        width: 100%
+        padding: 35px 27px 23px 25px
+    .event__desc-subtitle
+        font-size: 12px
+        margin-top: 9px
+        margin-bottom: 36px
+    .event__img
+        height: 310px
+        position: relative
+        z-index: 1
+    .event__number
+        z-index: 1
+        top: -2.6rem
+    .event-first
+        padding: 90px 15px 29px 15px
+    .event-first .event__number
+        top: -2rem
+        left: 0
+    .event__desc
+        position: relative
+        z-index: 2
+@media (max-width: 891px)
+    .slider-event .slider__thumbnails-item
+        width: 327px
+        height: 198px
+        img
+            height: 100%
+            object-fit: cover
+    .slider-event .slider__thumbnails-item:nth-child(4n)
+        margin: 0 0 10px 0
+@media (max-width: 767px)
+    .event-first
+        padding: 100px 10px 29px 10px
+    .event__wr
+        flex-direction: column
+    .event__wr-element-img
+        display: flex
+        flex-direction: column-reverse
+    .event__wr-element .wr-for-number
+        position: static
+    .event .section__left-title
+        font-size: 32px
+        width: 100%
+    .event__wrapper
+        margin-top: 20px
+        margin-bottom: 90px
+    .event__wrapper-links
+        font-size: 14px
+    .event__desc::after
+        display: none
+    .event__desc
+        width: 100%
+        padding: 35px 27px 23px 25px
+    .event__desc-subtitle
+        font-size: 12px
+        margin-top: 9px
+        margin-bottom: 36px
+    .event__img
+        height: 310px
+        position: relative
+        z-index: 1
+    .event__number
+        z-index: 1
+        top: -2.6rem
+    .event-first .event__number
+        top: -2rem
+        left: 0
+    .event .event__number
+        left: 0
+        top: -2rem
+    .event__desc
+        position: relative
+        z-index: 2
+@media screen and (max-width: 613px)
+    .slider__thumbnails
+        justify-content: center
+    .slider__thumbnails-item
+        width: 327px
+        height: 198px
+    .slider__thumbnails-item
+        margin: 0 0 10px 0
+    .slider__thumbnails-item:nth-child(3n)
+        margin: 0 0px 10px 0
+    .slider__thumbnails-item>img
+        height: 100%
 @media screen and (max-width: 575px)
     .section
         min-height: 24rem
@@ -2331,7 +2483,7 @@ html
         position: relative
         img
             width: 100%
-            transform: translate(-50%, -170%)
+            // transform: translate(-50%, -170%)
     .section__img-1
         width: 100px
         height: 100px
@@ -2655,9 +2807,9 @@ html
     .section-events__text p
         margin-top: 20px
     .slider__wrapper
-        height: 206px
+        height: 354px
         .slider__item
-            height: 206px
+            height: 354px
     .slider__control
         width: 74px !important
         height: 74px !important
@@ -2675,9 +2827,9 @@ html
             object-fit: cover
     .slider__thumbnails
         padding: 9px 9px 9px 9px
-        justify-content: space-between
+        justify-content: center
     .slider-event .slider__wrapper
-        height: 354px
+        height: 345px
     .slider-event .slider__control
         width: 54px !important
         height: 54px !important
@@ -2686,6 +2838,7 @@ html
         display: none
     .slider-event .slider__thumbnails
         padding: 20px 15px 0 15px
+        justify-content: center
     .slider-event .slider__thumbnails-item
         width: 327px
         height: 331px
@@ -2724,5 +2877,5 @@ html
     .modal-content-mini
         width: 83% !important
     .close
-        top: -5.7%
+        top: -13.7%
         right: 45%
