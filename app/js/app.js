@@ -76,7 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     },
     breakpoints: {
-      // when window width is >= 320px
       480: {
         slidesPerView: 1
       }
