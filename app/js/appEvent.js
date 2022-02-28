@@ -1,14 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
 
       // Слайдер с миниатюрой Мероприятие1
-      var sliderEvent = new SimpleAdaptiveSlider('.slider-event', {
-        loop: true,
-        autoplay: false,
-        swipe: true
-      });
+      if (document.querySelectorAll('.slider-event').length !== 0) {
+        var sliderEvent = new SimpleAdaptiveSlider('.slider-event', {
+          loop: true,
+          autoplay: false,
+          swipe: true
+        });
+      }
       var thumbnailsItem = document.querySelectorAll('.slider__thumbnails-item-event');
-  
-      function setActiveThumbnail() {
+
+      if(sliderEvent && thumbnailsItem) {
+        function setActiveThumbnail() {
           var sliderItemActive = document.querySelector('.slider__item_active');
           var index = parseInt(sliderItemActive.dataset.index);
           for (var i = 0, length = thumbnailsItem.length; i < length; i++) {
@@ -18,28 +21,33 @@ document.addEventListener('DOMContentLoaded', () => {
               thumbnailsItem[index].classList.add('active');
           }
           }
+        }
+        setActiveThumbnail();
+        document.querySelector('.slider-event').addEventListener('slider.set.active', setActiveThumbnail);
+        var sliderThumbnails = document.querySelector('.slider__thumbnails-event');
+        sliderThumbnails.addEventListener('click', function(e) {
+            $target = e.target.closest('.slider__thumbnails-item-event');
+            if (!$target) {
+            return;
+            }
+            var index = parseInt($target.dataset.slideTo, 10);
+            sliderEvent._moveTo(index);
+        });
       }
-      setActiveThumbnail();
-      document.querySelector('.slider-event').addEventListener('slider.set.active', setActiveThumbnail);
-      var sliderThumbnails = document.querySelector('.slider__thumbnails-event');
-      sliderThumbnails.addEventListener('click', function(e) {
-          $target = e.target.closest('.slider__thumbnails-item-event');
-          if (!$target) {
-          return;
-          }
-          var index = parseInt($target.dataset.slideTo, 10);
-          sliderEvent._moveTo(index);
-      });
+
 
       // Слайдер с миниатюрой Мероприятие2
-      var sliderEvent1 = new SimpleAdaptiveSlider('.slider-event1', {
-        loop: true,
-        autoplay: false,
-        swipe: true
-      });
+      if (document.querySelectorAll('.slider-event1').length !== 0) {
+        var sliderEvent1 = new SimpleAdaptiveSlider('.slider-event1', {
+          loop: true,
+          autoplay: false,
+          swipe: true
+        });
+      }
       var thumbnailsItem1 = document.querySelectorAll('.slider__thumbnails-item-event1');
-  
-      function setActiveThumbnail1() {
+
+      if (sliderEvent1 && thumbnailsItem1) {
+        function setActiveThumbnail1() {
           var sliderItemActive1 = document.querySelector('.slider__item_active');
           var index = parseInt(sliderItemActive1.dataset.index);
           for (var i = 0, length = thumbnailsItem1.length; i < length; i++) {
@@ -49,28 +57,32 @@ document.addEventListener('DOMContentLoaded', () => {
               thumbnailsItem1[index].classList.add('active');
           }
           }
+        }
+        setActiveThumbnail1();
+        document.querySelector('.slider-event1').addEventListener('slider.set.active', setActiveThumbnail1);
+        var sliderThumbnails1 = document.querySelector('.slider__thumbnails-event1');
+        sliderThumbnails1.addEventListener('click', function(e) {
+            $target = e.target.closest('.slider__thumbnails-item-event1');
+            if (!$target) {
+            return;
+            }
+            var index = parseInt($target.dataset.slideTo, 10);
+            sliderEvent1._moveTo(index);
+        });
       }
-      setActiveThumbnail1();
-      document.querySelector('.slider-event1').addEventListener('slider.set.active', setActiveThumbnail1);
-      var sliderThumbnails1 = document.querySelector('.slider__thumbnails-event1');
-      sliderThumbnails1.addEventListener('click', function(e) {
-          $target = e.target.closest('.slider__thumbnails-item-event1');
-          if (!$target) {
-          return;
-          }
-          var index = parseInt($target.dataset.slideTo, 10);
-          sliderEvent1._moveTo(index);
-      });
       
       // Слайдер с миниатюрой Мероприятие3
-      var sliderEvent3 = new SimpleAdaptiveSlider('.slider-event3', {
-        loop: true,
-        autoplay: false,
-        swipe: true
-      });
+      if (document.querySelectorAll('.slider-event3').length !== 0) {
+        var sliderEvent3 = new SimpleAdaptiveSlider('.slider-event3', {
+          loop: true,
+          autoplay: false,
+          swipe: true
+        });
+      }
       var thumbnailsItem3 = document.querySelectorAll('.slider__thumbnails-item-event3');
-  
-      function setActiveThumbnail3() {
+
+      if(sliderEvent3 && thumbnailsItem3) {
+        function setActiveThumbnail3() {
           var sliderItemActive3 = document.querySelector('.slider__item_active');
           var index = parseInt(sliderItemActive3.dataset.index);
           for (var i = 0, length = thumbnailsItem3.length; i < length; i++) {
@@ -80,28 +92,33 @@ document.addEventListener('DOMContentLoaded', () => {
               thumbnailsItem3[index].classList.add('active');
           }
           }
+        }
+        setActiveThumbnail3();
+        document.querySelector('.slider-event3').addEventListener('slider.set.active', setActiveThumbnail3);
+        var sliderThumbnails3 = document.querySelector('.slider__thumbnails-event3');
+        sliderThumbnails3.addEventListener('click', function(e) {
+            $target = e.target.closest('.slider__thumbnails-item-event3');
+            if (!$target) {
+            return;
+            }
+            var index = parseInt($target.dataset.slideTo, 10);
+            sliderEvent3._moveTo(index);
+        });
       }
-      setActiveThumbnail3();
-      document.querySelector('.slider-event3').addEventListener('slider.set.active', setActiveThumbnail3);
-      var sliderThumbnails3 = document.querySelector('.slider__thumbnails-event3');
-      sliderThumbnails3.addEventListener('click', function(e) {
-          $target = e.target.closest('.slider__thumbnails-item-event3');
-          if (!$target) {
-          return;
-          }
-          var index = parseInt($target.dataset.slideTo, 10);
-          sliderEvent3._moveTo(index);
-      });
+
 
       // Слайдер с миниатюрой Мероприятие 4
-      var sliderEvent4 = new SimpleAdaptiveSlider('.slider-event4', {
-        loop: true,
-        autoplay: false,
-        swipe: true
-      });
+      if (document.querySelectorAll('.slider-event4').length !== 0) {
+        var sliderEvent4 = new SimpleAdaptiveSlider('.slider-event4', {
+          loop: true,
+          autoplay: false,
+          swipe: true
+        });
+      }
       var thumbnailsItem4 = document.querySelectorAll('.slider__thumbnails-item-event4');
-  
-      function setActiveThumbnail4() {
+
+      if (sliderEvent4 && thumbnailsItem4) {
+        function setActiveThumbnail4() {
           var sliderItemActive4 = document.querySelector('.slider__item_active');
           var index = parseInt(sliderItemActive4.dataset.index);
           for (var i = 0, length = thumbnailsItem4.length; i < length; i++) {
@@ -111,18 +128,19 @@ document.addEventListener('DOMContentLoaded', () => {
               thumbnailsItem4[index].classList.add('active');
           }
           }
+        }
+        setActiveThumbnail4();
+        document.querySelector('.slider-event4').addEventListener('slider.set.active', setActiveThumbnail4);
+        var sliderThumbnails4 = document.querySelector('.slider__thumbnails-event4');
+        sliderThumbnails4.addEventListener('click', function(e) {
+            $target = e.target.closest('.slider__thumbnails-item-event4');
+            if (!$target) {
+            return;
+            }
+            var index = parseInt($target.dataset.slideTo, 10);
+            sliderEvent4._moveTo(index);
+        });
       }
-      setActiveThumbnail4();
-      document.querySelector('.slider-event4').addEventListener('slider.set.active', setActiveThumbnail4);
-      var sliderThumbnails4 = document.querySelector('.slider__thumbnails-event4');
-      sliderThumbnails4.addEventListener('click', function(e) {
-          $target = e.target.closest('.slider__thumbnails-item-event4');
-          if (!$target) {
-          return;
-          }
-          var index = parseInt($target.dataset.slideTo, 10);
-          sliderEvent4._moveTo(index);
-      });
 
     function showModal(modal) {
       modal.style.display = "block";
@@ -137,14 +155,15 @@ document.addEventListener('DOMContentLoaded', () => {
     var btn_event = document.getElementById("myBtn_event");
     var span_event = document.getElementById("close_event");
 
-  if (modal_event && btn_event) {
-    btn_event.onclick = function() {
-      showModal(modal_event);
-    };
+    if (modal_event && btn_event) {
+      btn_event.onclick = function() {
+        showModal(modal_event);
+      };
 
-    span_event.onclick = function() {
-      closeModal(modal_event);
-    };
+      span_event.onclick = function() {
+        closeModal(modal_event);
+      };
+    }
 
     // Галерея Мероприятие 2
     var modal_event1 = document.getElementById('myModal_event1');
@@ -190,5 +209,4 @@ document.addEventListener('DOMContentLoaded', () => {
         closeModal(modal_event4);
       };
     }
-  }
 });
