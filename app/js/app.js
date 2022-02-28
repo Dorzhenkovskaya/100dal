@@ -88,10 +88,10 @@ document.addEventListener('DOMContentLoaded', () => {
  if (swiperPrev && swiperNext) {
   swiperPrev.addEventListener('click', () => {
     eventsSlider.slidePrev();
-  })
+  });
   swiperNext.addEventListener('click', () => {
     eventsSlider.slideNext();
-  })
+  });
  }
 
   const eventsPhotoSlider = new Swiper('#events-photo-slider', {
@@ -116,10 +116,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   swiperPrev.addEventListener('click', () => {
     eventsPhotoSlider.slidePrev();
-  })
+  });
   swiperNext.addEventListener('click', () => {
     eventsPhotoSlider.slideNext();
-  })
+  });
 
   const newsSlider = new Swiper('#news-slider', {
     grid: {
