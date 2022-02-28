@@ -275,6 +275,7 @@ html
             line-height: 121.19%
             text-transform: uppercase
             color: #1F1F1F
+            float: inherit
         &-subtitle
             width: 12rem
             margin-top: 0.6rem
@@ -1805,6 +1806,7 @@ html
     display: flex
     flex-flow: row wrap
     align-content: center
+    justify-content: center
     max-width: 100%
     height: 100%
     background: #FFFFFF
@@ -1816,8 +1818,6 @@ html
         transition: 0.15s opacity ease-in-out
         width: 308px
         height: 184px
-    &-item:nth-child(4n)
-        margin-right: 0
     &-item:hover
         opacity: 1
     &-item>img
@@ -1901,14 +1901,6 @@ html
         width: 70px
     .section-events__wr-element-img
         width: 50%
-    .slider__thumbnails-item:nth-child(3n)
-        margin-right: 0
-    .slider__thumbnails-item:nth-child(4n)
-        margin: 0 25px 10px 0
-    .slider-event .slider__thumbnails-item:nth-child(3n)
-        margin-right: 0
-    .slider-event .slider__thumbnails-item:nth-child(4n)
-        margin: 0
     .slider__indicators
         display: none !important
     .slider__thumbnails
@@ -1933,7 +1925,7 @@ html
         height: 186px
 @media (max-width: 1549px)
     .nav__item
-        margin-right: 0
+        margin-right: 10px
     .header__logo
         margin-left: 0
     .section__news-desc
@@ -2005,7 +1997,7 @@ html
     .nav__link
         font-size: .4rem
     .nav__item
-        margin-right: 0.1rem
+        margin-right: 10px
     .header__logo
         margin-left: 0
     .header__logo-offer
@@ -2142,7 +2134,7 @@ html
     .slider-event .slider__thumbnails-item:nth-child(3n)
         margin-right: 0
 
-@media (max-width: 1106px)
+@media (max-width: 1175px)
     .header__logo
         flex-direction: column
     .header__logo-offer
@@ -2372,8 +2364,6 @@ html
         img
             height: 100%
             object-fit: cover
-    .slider-event .slider__thumbnails-item:nth-child(4n)
-        margin: 0 0 10px 0
 @media (max-width: 767px)
     .event-first
         padding: 100px 10px 29px 10px
@@ -2483,7 +2473,6 @@ html
         position: relative
         img
             width: 100%
-            // transform: translate(-50%, -170%)
     .section__img-1
         width: 100px
         height: 100px
