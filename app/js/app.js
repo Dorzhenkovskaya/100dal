@@ -154,8 +154,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   var modal = document.getElementById('myModal');
-  var btn = document.getElementById("myBtn");
-  var span = document.getElementsByClassName("close")[0];
+  var btn = document.getElementById('myBtn');
+  var span = document.getElementById('close');
 
  if(modal && btn && span) {
   btn.onclick = function() {
@@ -377,6 +377,20 @@ document.addEventListener('DOMContentLoaded', () => {
   function closeModal(modal) {
     modal.style.display = "none";
   }
+
+  // Дегутационная карта Холодная
+  var modalColdMini = document.getElementById('myModal_ColdMini');
+  var btnColdMini = document.getElementById("myBtn_ColdMini");
+  var spanColdMini = document.getElementById("close_ColdMini");
+
+ if(modalColdMini && btnColdMini && spanColdMini) {
+  btnColdMini.onclick = function() {
+    modalColdMini.style.display = "block";
+  }
+  spanColdMini.onclick = function() {
+    modalColdMini.style.display = "none";
+  }
+ }
 
   // Галерея Бар
   var modal_1 = document.getElementById('myModal_1');
