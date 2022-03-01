@@ -142,7 +142,28 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const tovarSlider = new Swiper('#tovar-slider', {
-    spaceBetween: 10,
+    grid: {
+      rows: 1,
+      fill: 'row',
+    },
+    navigation: {
+      nextEl: '.tovar-next',
+      prevEl: '.tovar-prev',
+    }
+  });
+
+  const tovarSlider1 = new Swiper('#tovar-slider1', {
+    grid: {
+      rows: 1,
+      fill: 'row',
+    },
+    navigation: {
+      nextEl: '.tovar-next',
+      prevEl: '.tovar-prev',
+    }
+  });
+
+  const tovarSlider2 = new Swiper('#tovar-slider2', {
     grid: {
       rows: 1,
       fill: 'row',
@@ -177,10 +198,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (swiperNewsPrev && swiperNewsNext) {
     swiperNewsPrev.addEventListener('click', () => {
       newsSlider.slidePrev();
-    })
+    });
     swiperNewsNext.addEventListener('click', () => {
       newsSlider.slideNext();
-    })
+    });
   }
 
   const imgSlider = new Swiper('#img-slider', {
@@ -386,11 +407,25 @@ document.addEventListener('DOMContentLoaded', () => {
  if(modalColdMini && btnColdMini && spanColdMini) {
   btnColdMini.onclick = function() {
     modalColdMini.style.display = "block";
-  }
+  };
   spanColdMini.onclick = function() {
     modalColdMini.style.display = "none";
-  }
+  };
  }
+
+ // Дегутационная карта Большая
+ var modalBigMini = document.getElementById('myModal_BigMini');
+ var btnBigMini = document.getElementById("myBtn_BigMini");
+ var spanBigMini = document.getElementById("close_BigMini");
+
+if(modalBigMini && btnBigMini && spanBigMini) {
+ btnBigMini.onclick = function() {
+   modalBigMini.style.display = "block";
+ };
+ spanBigMini.onclick = function() {
+   modalBigMini.style.display = "none";
+ };
+}
 
   // Галерея Бар
   var modal_1 = document.getElementById('myModal_1');
