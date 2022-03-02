@@ -1367,7 +1367,7 @@ html
     width: 40px
     height: 40px
     cursor: pointer
-    z-index: 2
+    z-index: 5
     & > span,
     & > span::before,
     & > span::after
@@ -1398,14 +1398,16 @@ html
     background: rgba(0, 0, 0, 0.74)
     box-shadow: 1px 0px 6px rgba(0, 0, 0, .2)
     transition-duration: .25s
-    z-index: 1
+    z-index: 2
+    li
+        line-height: 5
 
 .menu__item
     display: block
-    padding: 12px 24px
+    padding: 0 24px
     color: #FFFFFF
     font-family: 'Roboto', sans-serif
-    font-size: 20px
+    font-size: 14px
     font-weight: 600
     text-decoration: none
     transition-duration: .25s
@@ -1844,7 +1846,7 @@ html
 
 #fullpage
     max-width: 100vw
-    // overflow: hidden
+    overflow: hidden
 
 .slider-event
     .slider__indicators
@@ -2467,6 +2469,7 @@ html
         top: 0px !important
         right: 1rem
         margin-top: 10px
+        z-index: -1
     .header__social
         left: 50%
         margin-right: -50%
