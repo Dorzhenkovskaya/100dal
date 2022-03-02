@@ -158,8 +158,8 @@ document.addEventListener('DOMContentLoaded', () => {
       fill: 'row',
     },
     navigation: {
-      nextEl: '.tovar-next',
-      prevEl: '.tovar-prev',
+      nextEl: '.tovar-nextCold',
+      prevEl: '.tovar-prevCold',
     }
   });
 
@@ -169,8 +169,8 @@ document.addEventListener('DOMContentLoaded', () => {
       fill: 'row',
     },
     navigation: {
-      nextEl: '.tovar-next',
-      prevEl: '.tovar-prev',
+      nextEl: '.tovar-nextBig',
+      prevEl: '.tovar-prevBig',
     }
   });
 
