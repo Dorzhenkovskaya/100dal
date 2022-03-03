@@ -174,23 +174,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  var modal = document.getElementById('myModal');
-  var btn = document.getElementById('myBtn');
-  var span = document.getElementById('close');
+  const tovarSliderMobile = new Swiper('#tovar-slider-mobile', {
+    grid: {
+      rows: 1,
+      fill: 'row',
+    },
+    navigation: {
+      nextEl: '.tovar-next-mobile',
+      prevEl: '.tovar-prev-mobile',
+    }
+  });
 
- if(modal && btn && span) {
-  btn.onclick = function() {
-    modal.style.display = "block";
-  }
-  span.onclick = function() {
-      modal.style.display = "none";
-  }
-  window.onclick = function(event) {
-      if (event.target == modal) {
-          modal.style.display = "none";
-      }
-  }
- }
+  const tovarSlider1Mobile = new Swiper('#tovar-slider1-mobile', {
+    grid: {
+      rows: 1,
+      fill: 'row',
+    },
+    navigation: {
+      nextEl: '.tovar-nextColdMobile',
+      prevEl: '.tovar-prevColdMobile',
+    }
+  });
+
+  const tovarSlider2Mobile = new Swiper('#tovar-slider2-mobile', {
+    grid: {
+      rows: 1,
+      fill: 'row',
+    },
+    navigation: {
+      nextEl: '.tovar-nextBigMobile',
+      prevEl: '.tovar-prevBigMobile',
+    }
+  });
 
   const swiperNewsPrev = document.getElementById('swiperNewsPrev')
   const swiperNewsNext = document.getElementById('swiperNewsNext')
@@ -399,34 +414,6 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.style.display = "none";
   }
 
-  // Дегутационная карта Холодная
-  var modalColdMini = document.getElementById('myModal_ColdMini');
-  var btnColdMini = document.getElementById("myBtn_ColdMini");
-  var spanColdMini = document.getElementById("close_ColdMini");
-
- if(modalColdMini && btnColdMini && spanColdMini) {
-  btnColdMini.onclick = function() {
-    modalColdMini.style.display = "block";
-  };
-  spanColdMini.onclick = function() {
-    modalColdMini.style.display = "none";
-  };
- }
-
- // Дегутационная карта Большая
- var modalBigMini = document.getElementById('myModal_BigMini');
- var btnBigMini = document.getElementById("myBtn_BigMini");
- var spanBigMini = document.getElementById("close_BigMini");
-
-if(modalBigMini && btnBigMini && spanBigMini) {
- btnBigMini.onclick = function() {
-   modalBigMini.style.display = "block";
- };
- spanBigMini.onclick = function() {
-   modalBigMini.style.display = "none";
- };
-}
-
   // Галерея Бар
   var modal_1 = document.getElementById('myModal_1');
   var btn_1 = document.getElementById("myBtn_1");
@@ -500,5 +487,81 @@ if(modalBigMini && btnBigMini && spanBigMini) {
     span_food.onclick = function() {
       closeModal(modal_food);
     };
+  }
+
+  var modal = document.getElementById('myModal');
+  var btn = document.getElementById('myBtn');
+  var span = document.getElementById('close');
+
+  var modalMobile = document.getElementById('myModalMobile');
+  var spanMobile = document.getElementById('closeMobile');
+
+  // Дегутационная карта Холодная
+  var modalColdMini = document.getElementById('myModal_ColdMini');
+  var btnColdMini = document.getElementById("myBtn_ColdMini");
+  var spanColdMini = document.getElementById("close_ColdMini");
+
+  var modalMobileCold = document.getElementById('myModal_ColdMini_Mobile');
+  var spanMobileCold = document.getElementById('close_ColdMini_Mobile');
+
+  // Дегутационная карта Большая
+  var modalBigMini = document.getElementById('myModal_BigMini');
+  var btnBigMini = document.getElementById("myBtn_BigMini");
+  var spanBigMini = document.getElementById("close_BigMini");
+
+  var modalMobileBig = document.getElementById('myModal_BigMini_Mobile');
+  var spanMobileBig = document.getElementById('close_BigMini_Mobile');
+
+  let screenWidth = window.screen.width;
+  if (screenWidth > 769) {
+    if (modal && btn && span) {
+      btn.onclick = function() {
+        modal.style.display = "block";
+      };
+      span.onclick = function() {
+          modal.style.display = "none";
+      };
+    }
+    if(modalColdMini && btnColdMini && spanColdMini) {
+      btnColdMini.onclick = function() {
+        modalColdMini.style.display = "block";
+      };
+      spanColdMini.onclick = function() {
+        modalColdMini.style.display = "none";
+      };
+    }
+    if(modalBigMini && btnBigMini && spanBigMini) {
+      btnBigMini.onclick = function() {
+        modalBigMini.style.display = "block";
+      };
+      spanBigMini.onclick = function() {
+        modalBigMini.style.display = "none";
+      };
+     }     
+  } else {
+    if (modalMobile && btn && spanMobile) {
+      btn.onclick = function() {
+        modalMobile.style.display = "block";
+      };
+      spanMobile.onclick = function() {
+          modalMobile.style.display = "none";
+      };
+    }
+    if(modalMobileCold && btnColdMini && spanMobileCold) {
+      btnColdMini.onclick = function() {
+        modalMobileCold.style.display = "block";
+      };
+      spanMobileCold.onclick = function() {
+        modalMobileCold.style.display = "none";
+      };
+    }
+    if(modalMobileBig && btnBigMini && spanMobileBig) {
+      btnBigMini.onclick = function() {
+        modalMobileBig.style.display = "block";
+      };
+      spanMobileBig.onclick = function() {
+        modalMobileBig.style.display = "none";
+      };
+    }
   }
 });

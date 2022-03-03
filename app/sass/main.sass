@@ -675,7 +675,7 @@ html
 
 .news-media__content-wrap
     margin-top: 1.8rem
-    height: 26.5rem
+    padding-bottom: 60px
 
 .news-swiper-navigation
     position: absolute
@@ -686,6 +686,9 @@ html
 
 .news-media__item
     width: 38.2rem
+    height: auto !important
+    display: flex
+    flex-direction: column
     &-wr1
         position: relative
         width: 99%
@@ -693,11 +696,15 @@ html
             width: 100%
     &-wr2
         background: #FFFFFF
-        position: absolute
-        top: 10.8rem
-        left: 2rem
         width: 21.1rem
         padding: 1.5rem 1.2rem 2rem 1.5rem
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        margin: -240px 0 0 30px
+        position: relative
+        flex-grow: 1
+        z-index: 1
         &-data
             font-family: 'Source Sans Pro Regular'
             font-style: normal
@@ -713,6 +720,7 @@ html
             font-size: 1.3rem
             line-height: 121.19%
             color: #1F1F1F
+            margin-bottom: auto
         &-btn
             margin-top: 2rem
             .btn-light
@@ -832,6 +840,8 @@ html
         -webkit-animation-duration: 0.4s
         animation-name: animatetop
         animation-duration: 0.4s
+    .modal-content-mobile
+        height: 95%
 
 @-webkit-keyframes animatetop
     from
@@ -1884,6 +1894,10 @@ html
         @include img-resp
         object-fit: cover
 
+.content-2
+    min-height: 0
+    padding: 0px 0 40vh
+
 // Mobal-ver
 @media (min-width: 1920px)
     .section__news-wr
@@ -2023,11 +2037,10 @@ html
     .news-swiper-navigation
         right: 3rem
     .news-media__item-wr2
-        top: 9rem
-        left: 0
         width: 99%
         padding: 1rem 1rem
         font-size: 28px
+        margin: -10px 0 0 0px
     .map__location
         width: 100%
     .ymaps-2-1-79-map
@@ -2228,8 +2241,6 @@ html
         padding: 2rem 1rem 0 1rem
     .news-media__content-wrap
         margin-top: 6rem
-    .news-media__item-wr2
-        left: 0
     .news-media__item-wr2-title
         font-size: 25px
     .news-media__item-wr2-btn
@@ -2615,14 +2626,16 @@ html
     .events-media__item-title
         font-size: 20px
         margin-top: 7px
+        display: inline-flex
     .events-media__item-descr
         font-size: 12px
-        width: 228px
+        width: auto
         margin-bottom: 22px
     .events-pagination
         top: 75%
         left: 25px !important
-        width: 65px !important
+        width: auto !important
+        text-align: left
     .events-photo-media__content-wrap
         height: 375px
         margin-top: 280px
@@ -2634,8 +2647,6 @@ html
         left: 2rem
     .news-media__item-wr2
         width: 100%
-        top: 7rem
-        left: 0
         padding: 20px 17px 17px 17px
     .news-media__item-wr2-data
         font-size: 12px
@@ -2648,7 +2659,7 @@ html
     .news-media__item-wr2-btn
         margin-top: 33px
     .news
-        max-height: 700px
+        max-height: 770px
     .contacts .section__wr
         padding: 31px 27px 36px 25px
     .contacts
@@ -2883,6 +2894,10 @@ html
     .close
         top: -13.7%
         right: 45%
+    .section-news__wr-left-text p img
+        width: 100%
+        height: 50vw
+        object-fit: cover
 @media screen and ( max-width: 321px)
     .section__btn
         width: 90%
