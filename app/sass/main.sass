@@ -2687,19 +2687,27 @@ html
         width: 100%
         height: 50%
     .tovar-next
-        right: -2.1rem
+        right: -1.3rem
     .tovar-prev
-        left: -2.1rem
+        left: -1.3rem
     .tovar-next::after
-        width: 74px
-        height: 74px
-        top: -19px
-        left: -25px
+        width: 1.5rem
+        height: 1.5rem
+        position: absolute
+        top: 0
+        left: -20%
     .tovar-prev::after
-        width: 74px
-        height: 74px
-        top: -19px
-        left: -21px
+        width: 1.5rem
+        height: 1.5rem
+        position: absolute
+        top: 0
+        left: -9px
+    .tovar-next::before
+        width: 1.5rem
+        height: 1.5rem
+    .tovar-prev::before
+        width: 1.5rem
+        height: 1.5rem
     .tovar__wr
         width: 90%
         height: 86%
@@ -2892,12 +2900,20 @@ html
     .modal-content-mini
         width: 83% !important
     .close
-        top: -13.7%
+        top: -6%
         right: 45%
     .section-news__wr-left-text p img
         width: 100%
         height: 50vw
         object-fit: cover
+    .modal .modal-content-mobile
+        width: 65%
+    .tovar-media__item-center img
+        object-fit: contain
+    .modal .modal-content
+        background-color: transparent
+    .modal
+        padding-top: 55px
 @media screen and ( max-width: 321px)
     .section__btn
         width: 90%
